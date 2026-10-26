@@ -10,7 +10,7 @@
   window.ICONS = { arrow, user };
 
   // Шапка
-  const links = [["spring2027.html", "nav.spring", "spring"], ["committees.html", "nav.committees", "committees"], ["team.html", "nav.team", "team"], ["prepare.html", "nav.prepare", "prepare"], ["rules.html", "nav.rules", "rules"], ["archive.html", "nav.archive", "archive"]];
+  const links = [["index.html", "nav.home", "home"], ["spring2027.html", "nav.spring", "spring"], ["committees.html", "nav.committees", "committees"], ["team.html", "nav.team", "team"], ["prepare.html", "nav.prepare", "prepare"], ["rules.html", "nav.rules", "rules"], ["archive.html", "nav.archive", "archive"]];
   const head = document.createElement("header");
   head.className = "site-head";
   head.innerHTML = `<div class="wrap head-in">
@@ -33,7 +33,7 @@
   foot.innerHTML = `<div class="wrap"><div class="foot-grid">
       <div class="foot-brand"><img src="img/emblem-white.png" alt=""><div><b data-i18n="brand.name"></b><span data-i18n="foot.text"></span></div></div>
       <a class="foot-org" href="https://www.unn.ru/" target="_blank" rel="noopener"><small data-i18n="org.label"></small><img src="img/unn-white.svg" alt="ННГУ им. Н. И. Лобачевского"></a>
-      <nav class="foot-nav"><a href="index.html" data-i18n="nav.home"></a>${links.map(([h, k]) => `<a href="${h}" data-i18n="${k}"></a>`).join("")}<a href="${MUN.vk}" target="_blank" rel="noopener" data-i18n="foot.vk"></a></nav>
+      <nav class="foot-nav">${links.map(([h, k]) => `<a href="${h}" data-i18n="${k}"></a>`).join("")}<a href="${MUN.vk}" target="_blank" rel="noopener" data-i18n="foot.vk"></a></nav>
     </div>
     <div class="foot-bottom"><span>© ${new Date().getFullYear()} · <span data-i18n="foot.made"></span></span><span>#UNITEDBYUN · #LSUMUN</span></div></div>`;
   document.body.append(foot);
