@@ -8,7 +8,7 @@
 <link rel="icon" href="img/emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=1793010580">
+<link rel="stylesheet" href="css/style.css?v=1793010648">
 </head>
 <body data-page="spring">
 <main>
@@ -41,7 +41,7 @@
           <a class="btn btn-ghost" href="archive.html#s2026" data-i18n="hero.cta2"></a>
           <span class="res-sign"><span data-i18n="res.sign"></span></span>
         </footer>
-        <div class="res-stamp" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="sc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="2"/><text><textPath href="#sc" id="stamp-text">МОДЕЛЬ ООН ННГУ · ПРИНЯТО · LSU MUN · ПРИНЯТО ·</textPath></text></svg><img src="img/emblem.png" alt=""></div>
+        <div class="res-stamp" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="sc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="2"/><text><textPath href="#sc" id="stamp-text" textLength="484" lengthAdjust="spacing">МОДЕЛЬ ООН ННГУ · ПРИНЯТО · LSU MUN ·</textPath></text><image href="img/emblem.png" x="56" y="56" width="88" height="88" preserveAspectRatio="xMidYMid meet"/></svg></div>
       </article>
       <figure class="res-attach">
         <span class="clip" aria-hidden="true"></span>
@@ -78,11 +78,11 @@
   </section>
   <section style="padding-top:0"><div class="wrap"><div class="join rv"><div><b data-i18n="sp.prepT"></b><span class="muted" data-i18n="sp.prepD"></span></div><a class="btn btn-primary" href="prepare.html" data-i18n="nav.prepare"></a></div></div></section>
 </main>
-<script src="js/data.js?v=1793010580"></script>
+<script src="js/data.js?v=1793010648"></script>
 <script src="js/i18n.js"></script>
-<script src="js/main.js?v=1793010580"></script>
+<script src="js/main.js?v=1793010648"></script>
 <script>
-  const stampTxt = () => { document.getElementById("stamp-text").textContent = LANG === "en" ? "LSU MODEL UN · ADOPTED · LSU MUN · ADOPTED ·" : "МОДЕЛЬ ООН ННГУ · ПРИНЯТО · LSU MUN · ПРИНЯТО ·"; };
+  const stampTxt = () => { document.getElementById("stamp-text").textContent = LANG === "en" ? "LSU MODEL UN · ADOPTED · LSU MUN ·" : "МОДЕЛЬ ООН ННГУ · ПРИНЯТО · LSU MUN ·"; };
   onLang(() => { document.getElementById("next-when").textContent = L(MUN.next.short); stampTxt(); });
   const ap = window.applyLang; window.applyLang = () => { ap(); document.getElementById("next-when").textContent = L(MUN.next.short); stampTxt(); };
 </script>

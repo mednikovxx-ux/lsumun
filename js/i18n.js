@@ -20,7 +20,7 @@ window.I18N = {
     "hero.title": "Модель ООН ННГУ",
     "hero.lead": "Три дня вы говорите от имени страны: выступаете, собираете коалицию и пишете резолюцию вместе с делегатами из других вузов и стран.",
     "hero.next": "Следующая сессия",
-    "hero.cta": "Следить за регистрацией",
+    "hero.cta": "Стать делегатом",
     "hero.cta2": "Как это было в 2026",
     "hero.caption": "Делегаты и президиум Модели ООН ННГУ",
 
@@ -124,7 +124,7 @@ window.I18N = {
     "hero.title": "LSU Model UN",
     "hero.lead": "For three days you speak for a country: you take the floor, build a coalition and draft a resolution with delegates from other universities and countries.",
     "hero.next": "Next session",
-    "hero.cta": "Follow registration",
+    "hero.cta": "Become a delegate",
     "hero.cta2": "See the 2026 session",
     "hero.caption": "Delegates and chairs of LSU Model UN",
 
