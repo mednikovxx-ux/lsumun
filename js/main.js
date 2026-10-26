@@ -123,7 +123,7 @@
   R.greet = (el) => {
     el.innerHTML = MUN.greetings.map((g) => {
       const q = L(g.quote);
-      const ph = g.photo ? `<div class="gph has" style="background-image:url(${g.photo})" role="img" aria-label="${esc(L(g.name))}"></div>` : `<div class="gph" aria-hidden="true">${initials(L(g.name))}</div>`;
+      const ph = g.photo ? `<div class="gph has"><img src="${g.photo}" alt="${esc(L(g.name))}" decoding="async" width="600" height="700"></div>` : `<div class="gph" aria-hidden="true">${initials(L(g.name))}</div>`;
       const quote = `<blockquote class="${q ? "" : "soon"}">${q ? esc(q) : t("greet.quoteSoon")}</blockquote>`;
       const who = `<div><div class="gname">${esc(L(g.name))}</div><div class="gtitle">${esc(L(g.title))}</div></div>`;
       if (g.lead) return `<article class="greet rv lead-g${g.photo ? " with-photo" : ""}">${ph}<div class="gbody">${quote}${who}</div></article>`;
