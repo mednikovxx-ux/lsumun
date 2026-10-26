@@ -174,14 +174,14 @@
 
   // ---------- кабинет председателя ----------
   Object.assign(I18N.ru, {
-    "c.tab.motions": "Моушены", "c.tab.speakers": "Дебаты", "c.tab.vote": "Резолюция",
+    "c.tab.motions": "Процедурные предложения", "c.tab.speakers": "Дебаты", "c.tab.vote": "Резолюция",
     "c.holder": "Закреплена за", "c.applied": "Подали заявку", "c.choice": "-й выбор", "c.noOne": "никто", "c.seed": "Заполнить демо-заявками", "c.seedHint": "Заявок в этот комитет пока нет. Для пробы можно добавить вымышленных делегатов.",
     "c.allP": "Все присутствуют", "c.qYes": "есть", "c.qNo": "нет", "c.qNeed": "нужно", "c.noQuorum": "Кворума нет: нужно, чтобы присутствовали две трети стран-членов.", "c.rollFirst": "Перекличка ещё не проведена — голосуют все страны комитета.",
-    "c.newMotion": "Новый моушен", "c.mType": "Вид", "c.mBy": "Кто предлагает", "c.mTopic": "Тема", "c.mTotal": "Общее время, мин", "c.mPer": "На оратора, с", "c.mAdd": "Внести",
-    "c.mt.mod": "Контролируемые дебаты", "c.mt.unmod": "Неконтролируемые дебаты", "c.mt.agenda": "Установление повестки дня", "c.mt.suspend": "Приостановить заседание", "c.mt.resume": "Возобновить заседание", "c.mt.close": "Прекращение прений", "c.mt.other": "Другое",
+    "c.newMotion": "Новое процедурное предложение", "c.mType": "Вид", "c.mBy": "Кто предлагает", "c.mTopic": "Тема", "c.mTotal": "Общее время, мин", "c.mPer": "На оратора, с", "c.mAdd": "Внести",
+    "c.mt.mod": "Контролируемые дебаты", "c.mt.unmod": "Неконтролируемые дебаты", "c.mt.agenda": "Установление повестки дня", "c.mt.suspend": "Приостановить заседание", "c.mt.resume": "Возобновить заседание", "c.mt.close": "Прекращение прений", "c.mt.pingpong": "Пинг-понг", "c.mOpp": "Второй участник", "c.mt.other": "Другое",
     "c.min": "мин", "c.s": "с", "c.secPer": "с на оратора", "c.notVoted": "Не голосовали", "c.needFor": "Нужно «за»", "c.byCountry": "Голоса по странам", "c.restFor": "Остальные — за", "c.restAg": "Остальные — против",
-    "c.mWait": "ждёт голосования", "c.mRevote": "переголосование", "c.mFix": "Закрепить итоги голосования", "c.revoteNote": "Голоса разделились поровну — моушен вернулся на повторное голосование.", "c.vd.pass": "проходит", "c.vd.fail": "не проходит", "c.vd.tie": "поровну", "c.needMore": "«за» должно быть больше, чем «против»", "c.need23": "нужно 2/3 «за»", "c.mPass": "Прошёл", "c.mFail": "Не прошёл", "c.markPass": "Прошёл", "c.markFail": "Не прошёл", "c.change": "Изменить", "c.del": "Удалить", "c.sugPass": "по голосам проходит", "c.sugFail": "по голосам не проходит", "c.noMotions": "Моушенов пока не было. Внесите первый — он появится здесь с голосованием.", "c.procNote": "Процедурные голосования: только «за» или «против», воздерживаться нельзя.",
-    "c.startDeb": "Начать дебаты", "c.endDeb": "Завершить дебаты", "c.gen": "Общий список ораторов", "c.left": "осталось", "c.total": "всего", "c.perSp": "на оратора",
+    "c.mWait": "ждёт голосования", "c.mRevote": "переголосование", "c.mFix": "Закрепить итоги голосования", "c.revoteNote": "Голоса разделились поровну — предложение вернулось на повторное голосование.", "c.vd.pass": "проходит", "c.vd.fail": "не проходит", "c.vd.tie": "поровну", "c.needMore": "«за» должно быть больше, чем «против»", "c.need23": "нужно 2/3 «за»", "c.mPass": "Прошло", "c.mFail": "Не прошло", "c.markPass": "Прошло", "c.markFail": "Не прошло", "c.change": "Изменить", "c.del": "Удалить", "c.sugPass": "по голосам проходит", "c.sugFail": "по голосам не проходит", "c.noMotions": "Процедурных предложений пока не было. Внесите первое — оно появится здесь с голосованием.", "c.procNote": "Процедурные голосования: только «за» или «против», воздерживаться нельзя.",
+    "c.startDeb": "Начать дебаты", "c.dStack": "Предложения к обсуждению", "c.ds.now": "идёт", "c.ds.next": "в очереди", "c.ds.done": "завершено", "c.openDeb": "Открыть дебаты", "c.startNow": "Начать сейчас", "c.reDeb": "Вернуться к нему", "c.endDeb": "Завершить дебаты", "c.gen": "Общий список ораторов", "c.left": "осталось", "c.total": "всего", "c.perSp": "на оратора",
     "c.now": "Сейчас говорит", "c.pause": "Пауза", "c.done": "Речь окончена", "c.qs": "Вопросы к оратору", "c.qAdd": "Отметить вопрос", "c.noQ": "Вопросов пока нет",
     "c.queue": "Очередь", "c.toQueue": "В очередь", "c.spoke": "Выступили", "c.used": "Время", "c.qFrom": "Вопросы от", "c.noSpoke": "Пока никто не выступал.", "c.timeUp": "Время дебатов вышло",
     "c.tab.papers": "Позиционные доклады", "c.pText": "Текст доклада", "c.pTextHint": "Можно написать прямо здесь или приложить файл — или и то и другое.", "c.pFile": "Файл", "c.pSend": "Отправить на проверку", "c.pResend": "Отправить новую версию",
@@ -189,8 +189,8 @@
     "c.pAccept": "Принять", "c.pReturn": "На доработку", "c.pNote": "Комментарий делегату", "c.pOpen": "Открыть файл", "c.pRead": "Текст доклада", "c.noPapers": "Пока никто не отправил позиционный доклад.", "c.pNoFile": "Файл в демо не сохраняется — только название.",
     "c.ns.review": "Доклад на проверке у председателя. Ответ придёт в сообщения.", "c.ns.fix": "Председатель вернул доклад на доработку — посмотрите комментарий и отправьте новую версию.",
     "c.sponsors": "Кто внёс проект (авторы)", "c.addSp": "Добавить автора", "c.noSp": "Авторы не отмечены",
-    "c.rank": "Рейтинг активности", "c.rankHint": "Считается сам по ходу заседания. Баллы: предложил моушен — 1, моушен прошёл — ещё 2, выступил — 1, задал вопрос — 0,5, автор проекта резолюции — 3, резолюция принята — ещё 2, позиционный доклад принят — 2. Окончательное решение — за председателем.",
-    "c.rMo": "Моушены", "c.rPass": "Прошло", "c.rSp": "Речи", "c.rQ": "Вопросы", "c.rRes": "Резолюции", "c.rPP": "Доклад", "c.rPts": "Баллы", "c.rEmpty": "Пока нет данных: рейтинг появится, когда на заседании начнут вносить моушены и выступать.", "c.rFill": "Подставить из рейтинга", "c.rAuto": "предложено по рейтингу",
+    "c.rank": "Рейтинг активности", "c.rankHint": "Считается сам по ходу заседания. Баллы: внёс процедурное предложение — 1, оно прошло — ещё 2, выступил — 1, задал вопрос — 0,5, автор проекта резолюции — 3, резолюция принята — ещё 2, позиционный доклад принят — 2. Окончательное решение — за председателем.",
+    "c.rMo": "Предложения", "c.rPass": "Прошло", "c.rSp": "Речи", "c.rQ": "Вопросы", "c.rRes": "Резолюции", "c.rPP": "Доклад", "c.rPts": "Баллы", "c.rEmpty": "Пока нет данных: рейтинг появится, когда на заседании начнут вносить процедурные предложения и выступать.", "c.rFill": "Подставить из рейтинга", "c.rAuto": "предложено по рейтингу",
     "c.doc": "Документ", "c.record": "Записать в протокол", "c.protocol": "Протокол", "c.noAbst": "«Присутствует и голосует» — воздерживаться нельзя",
   });
   Object.assign(I18N.en, {
@@ -198,10 +198,10 @@
     "c.holder": "Assigned to", "c.applied": "Applied", "c.choice": " choice", "c.noOne": "nobody", "c.seed": "Fill with demo applications", "c.seedHint": "No applications to this committee yet. For a trial you can add fictional delegates.",
     "c.allP": "Everyone present", "c.qYes": "yes", "c.qNo": "no", "c.qNeed": "needed", "c.noQuorum": "No quorum: two-thirds of member states must be present.", "c.rollFirst": "Roll call not taken yet — all countries of the committee vote.",
     "c.newMotion": "New motion", "c.mType": "Type", "c.mBy": "Proposed by", "c.mTopic": "Topic", "c.mTotal": "Total time, min", "c.mPer": "Per speaker, s", "c.mAdd": "Add",
-    "c.mt.mod": "Moderated caucus", "c.mt.unmod": "Unmoderated caucus", "c.mt.agenda": "Setting the agenda", "c.mt.suspend": "Suspend the meeting", "c.mt.resume": "Resume the meeting", "c.mt.close": "Closure of debate", "c.mt.other": "Other",
+    "c.mt.mod": "Moderated caucus", "c.mt.unmod": "Unmoderated caucus", "c.mt.agenda": "Setting the agenda", "c.mt.suspend": "Suspend the meeting", "c.mt.resume": "Resume the meeting", "c.mt.close": "Closure of debate", "c.mt.pingpong": "Ping-pong", "c.mOpp": "Second participant", "c.mt.other": "Other",
     "c.min": "min", "c.s": "s", "c.secPer": "s per speaker", "c.notVoted": "Not voted", "c.needFor": "Votes for needed", "c.byCountry": "Votes by country", "c.restFor": "Rest — for", "c.restAg": "Rest — against",
     "c.mWait": "awaiting vote", "c.mRevote": "revote", "c.mFix": "Lock in the vote", "c.revoteNote": "The vote was tied — the motion goes back for a revote.", "c.vd.pass": "passes", "c.vd.fail": "fails", "c.vd.tie": "tied", "c.needMore": "more for than against", "c.need23": "2/3 for needed", "c.mPass": "Passed", "c.mFail": "Failed", "c.markPass": "Passed", "c.markFail": "Failed", "c.change": "Change", "c.del": "Delete", "c.sugPass": "passes by the votes", "c.sugFail": "fails by the votes", "c.noMotions": "No motions yet. Add the first one — it will appear here with its vote.", "c.procNote": "Procedural votes: for or against only, no abstentions.",
-    "c.startDeb": "Start debate", "c.endDeb": "End debate", "c.gen": "General speakers' list", "c.left": "left", "c.total": "total", "c.perSp": "per speaker",
+    "c.startDeb": "Start debate", "c.dStack": "Motions to debate", "c.ds.now": "in progress", "c.ds.next": "queued", "c.ds.done": "finished", "c.openDeb": "Open debate", "c.startNow": "Start now", "c.reDeb": "Go back to it", "c.endDeb": "End debate", "c.gen": "General speakers' list", "c.left": "left", "c.total": "total", "c.perSp": "per speaker",
     "c.now": "Now speaking", "c.pause": "Pause", "c.done": "Speech over", "c.qs": "Questions to the speaker", "c.qAdd": "Mark a question", "c.noQ": "No questions yet",
     "c.queue": "Queue", "c.toQueue": "Add to queue", "c.spoke": "Spoke", "c.used": "Time", "c.qFrom": "Questions from", "c.noSpoke": "Nobody has spoken yet.", "c.timeUp": "Debate time is up",
     "c.tab.papers": "Position Papers", "c.pText": "Paper text", "c.pTextHint": "Write it right here or attach a file — or both.", "c.pFile": "File", "c.pSend": "Send for review", "c.pResend": "Send a new version",
@@ -279,10 +279,10 @@
   };
 
   // моушены: процедурные — простое большинство присутствующих, прекращение прений — две трети
-  const MT = { mod: ["s", "topic", "total", "per"], unmod: ["s", "total"], agenda: ["s", "topic"], suspend: ["s"], resume: ["s"], close: ["t"], other: ["s", "topic"] };
+  const MT = { mod: ["s", "topic", "total", "per"], unmod: ["s", "total"], pingpong: ["s", "topic", "opp", "total", "per"], agenda: ["s", "topic"], suspend: ["s"], resume: ["s"], close: ["t"], other: ["s", "topic"] };
   // итог: «за» больше, чем «против» — прошёл; поровну — переголосование; прекращение прений — две трети поданных голосов
   const verdict = (m) => { const f = tally(m.votes, "f"), a = tally(m.votes, "a"); if (!f && !a) return ""; if (f === a) return "tie"; return (MT[m.type][0] === "t" ? f >= Math.ceil(((f + a) * 2) / 3) : f > a) ? "pass" : "fail"; };
-  const mMeta = (m) => [m.topic && `«${esc(m.topic)}»`, m.total && `${m.total} ${t("c.min")}`, m.per && `${m.per} ${t("c.secPer")}`].filter(Boolean).join(" · ");
+  const mMeta = (m) => [m.opp && `${esc(cn(chairCom(), m.by))} ↔ ${esc(cn(chairCom(), m.opp))}`, m.topic && `«${esc(m.topic)}»`, m.total && `${m.total} ${t("c.min")}`, m.per && `${m.per} ${t("c.secPer")}`].filter(Boolean).join(" · ");
   const openMo = new Set(); // какие моушены раскрыты — помним между перерисовками
   C.motions = () => {
     const c = chairCom(), list = db.motions[c.id] || [], vs = voters(c), r = db.roll[c.id] || {};
@@ -290,13 +290,14 @@
         <div class="field"><label for="mo-t">${t("c.mType")}</label><select id="mo-t">${Object.keys(MT).map((k) => `<option value="${k}">${t("c.mt." + k)}</option>`).join("")}</select></div>
         <div class="field"><label for="mo-by">${t("c.mBy")}</label><select id="mo-by">${cOpts(c, vs)}</select></div>
         <div class="field" data-f="topic"><label for="mo-topic">${t("c.mTopic")}</label><input id="mo-topic" autocomplete="off"></div>
+        <div class="field" data-f="opp"><label for="mo-opp">${t("c.mOpp")}</label><select id="mo-opp">${cOpts(c, vs.slice(1).concat(vs.slice(0, 1)))}</select></div>
         <div class="field" data-f="total"><label for="mo-total">${t("c.mTotal")}</label><input id="mo-total" type="number" min="1" max="180" value="15"></div>
         <div class="field" data-f="per"><label for="mo-per">${t("c.mPer")}</label><input id="mo-per" type="number" min="15" max="300" step="15" value="60"></div>
       </div><div><button class="btn btn-primary btn-s">${t("c.mAdd")}</button></div></form>`;
     const card = (m, i) => {
       const f = tally(m.votes, "f"), a = tally(m.votes, "a"), vd = verdict(m);
-      const deb = (m.type === "mod" || m.type === "unmod") && m.res === "pass";
-      const st = m.res ? `<span class="pill ${m.res === "pass" ? "ok" : "bad"}">${t(m.res === "pass" ? "c.mPass" : "c.mFail")}</span>` : `<span class="pill warn">${t(m.revote ? "c.mRevote" : "c.mWait")}</span>`;
+      const dd = deb(c), dst = !isDeb(m) ? "" : dd.mid === m.id ? "now" : dd.done.includes(m.id) ? "done" : "next";
+      const st = m.res ? `<span class="pill ${m.res === "pass" ? "ok" : "bad"}">${t(m.res === "pass" ? "c.mPass" : "c.mFail")}${dst ? " · " + t("c.ds." + dst) : ""}</span>` : `<span class="pill warn">${t(m.revote ? "c.mRevote" : "c.mWait")}</span>`;
       return `<details class="cab-card mo${m.res ? " mo-" + m.res : ""}" data-mo="${m.id}"${openMo.has(m.id) ? " open" : ""}>
         <summary class="mo-sum"><span class="mo-n">${i + 1}</span><span class="mo-t"><b>${t("c.mt." + m.type)}</b> <span class="muted">· ${esc(cn(c, m.by))}</span>${mMeta(m) ? `<small>${mMeta(m)}</small>` : ""}</span>
           <span class="mo-r">${f + a ? `<small class="mo-tl"><b class="okc">${f}</b> / <b class="badc">${a}</b></small>` : ""}${st}<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
@@ -306,7 +307,7 @@
         ${m.res ? "" : `<div class="roll flat">${vs.map((n) => `<div class="roll-row"><b>${esc(cn(c, n))}</b><div class="seg3">${[["f", "c.for"], ["a", "c.against"]].map(([k, l]) => `<button data-mv="${m.id}:${n}" data-v="${k}" aria-pressed="${m.votes[n] === k}">${t(l)}</button>`).join("")}</div></div>`).join("")}</div>
           <div class="timer-row"><button class="btn btn-ghost btn-s" data-mrest="${m.id}" data-v="f">${t("c.restFor")}</button><button class="btn btn-ghost btn-s" data-mrest="${m.id}" data-v="a">${t("c.restAg")}</button></div>`}
         <div class="timer-row">${m.res
-          ? `${deb ? `<button class="btn btn-primary btn-s" data-mstart="${m.id}">${t("c.startDeb")}</button>` : ""}<button class="btn btn-ghost btn-s" data-mres="${m.id}" data-v="">${t("c.change")}</button>`
+          ? `${dst ? `<span class="pill ${dst === "now" ? "ok" : ""}">${t("c.ds." + dst)}</span><button class="btn ${dst === "now" ? "btn-primary" : "btn-ghost"} btn-s" data-mstart="${m.id}">${t(dst === "now" ? "c.openDeb" : dst === "done" ? "c.reDeb" : "c.startNow")}</button>` : ""}<button class="btn btn-ghost btn-s" data-mres="${m.id}" data-v="">${t("c.change")}</button>`
           : `<button class="btn btn-primary btn-s" data-mfix="${m.id}"${vd ? "" : " disabled"}>${t("c.mFix")}</button>`}
           <button class="linkbtn" data-mdel="${m.id}">${t("c.del")}</button></div></div></details>`;
     };
@@ -316,7 +317,20 @@
   };
 
   // дебаты: общий список, контролируемые или неконтролируемые; часы считаются от времени старта, переживают переключение вкладок
-  const deb = (c) => (db.debate[c.id] ??= { mid: null, queue: db.speakers[c.id] || [], q: [], log: [] });
+  const deb = (c) => {
+    const d = (db.debate[c.id] ??= { mid: null, qs: { gen: db.speakers[c.id] || [] }, q: [], log: [] });
+    if (d.queue) { d.qs = { ...(d.qs || {}), gen: d.queue }; delete d.queue; }
+    d.qs ??= {}; d.done ??= [];
+    return d;
+  };
+  // у каждого моушена свой список ораторов; без моушена — общий список
+  const Q = (d) => (d.qs[d.mid || "gen"] ??= []);
+  const isDeb = (m) => (m.type === "mod" || m.type === "unmod" || m.type === "pingpong") && m.res === "pass";
+  // прошедшие моушены о дебатах выстраиваются стопкой: текущий, затем следующие по порядку
+  const pendingDeb = (c) => { const d = deb(c); return (db.motions[c.id] || []).filter((m) => isDeb(m) && m.id !== d.mid && !d.done.includes(m.id)); };
+  const startDeb = (c, m) => { const d = deb(c); d.mid = m.id; d.q = []; if (!Q(d).length && m.type === "mod") Q(d).push(m.by);
+    if (!Q(d).length && m.type === "pingpong") Q(d).push(m.by, m.opp); clock = { key: "", base: 0, t0: 0, full: 60 }; };
+  const endDeb = (c) => { const d = deb(c); if (d.mid && !d.done.includes(d.mid)) d.done.push(d.mid); d.mid = null; d.q = []; clock = { key: "", base: 0, t0: 0, full: 60 }; const nx = pendingDeb(c)[0]; if (nx) startDeb(c, nx); };
   const curM = (c) => (db.motions[c.id] || []).find((m) => m.id === deb(c).mid);
   let clock = { key: "", base: 0, t0: 0, full: 60 }, ctick = null;
   const left = () => Math.ceil(clock.base - (clock.t0 ? (Date.now() - clock.t0) / 1000 : 0));
@@ -324,26 +338,33 @@
   // круглый таймер: шкала убывает по мере того, как идёт время
   const ring = () => `<div class="tring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="tr-bg" cx="60" cy="60" r="52"/><circle class="tr-fg" id="trp" cx="60" cy="60" r="52" pathLength="100"/></svg><span class="timer" id="stm">${fmt(left())}</span></div>`;
   const spent = (c, m) => deb(c).log.filter((x) => x.mid === m.id).reduce((s, x) => s + x.used, 0);
+  const stack = (c) => {
+    const d = deb(c), all2 = (db.motions[c.id] || []).filter(isDeb);
+    if (!all2.length) return "";
+    const ord = [...all2.filter((m) => m.id === d.mid), ...pendingDeb(c), ...all2.filter((m) => d.done.includes(m.id) && m.id !== d.mid)];
+    return `<div class="cab-card dstack"><h3>${t("c.dStack")}</h3><ol>${ord.map((m) => { const k = m.id === d.mid ? "now" : d.done.includes(m.id) ? "done" : "next";
+      return `<li class="ds-${k}"><div><b>${t("c.mt." + m.type)}</b> <span class="muted">· ${esc(cn(c, m.by))}</span>${mMeta(m) ? `<small>${mMeta(m)}</small>` : ""}</div><span class="pill ${k === "now" ? "ok" : ""}">${t("c.ds." + k)}</span>${k === "next" ? `<button class="btn btn-ghost btn-s" data-mstart="${m.id}">${t("c.startNow")}</button>` : ""}</li>`; }).join("")}</ol></div>`;
+  };
   C.speakers = () => {
     const c = chairCom(), d = deb(c), m = curM(c), vs = voters(c);
     if (m && m.type === "unmod") {
       clockFor(`${c.id}:u:${m.id}`, m.total * 60);
-      return `${comPicker()}<div class="cab-card deb-head"><div><small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt.unmod")}</h3><p class="mo-meta">${mMeta(m)}</p></div><button class="btn btn-ghost btn-s" id="dend">${t("c.endDeb")}</button></div>
+      return `${comPicker()}${stack(c)}<div class="cab-card deb-head"><div><small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt.unmod")}</h3><p class="mo-meta">${mMeta(m)}</p></div><button class="btn btn-ghost btn-s" id="dend">${t("c.endDeb")}</button></div>
         <div class="cab-card speaker-now" style="margin-top:18px;text-align:center">${ring()}
           <div class="timer-row" style="justify-content:center"><button class="btn btn-primary btn-s" id="sgo">${t(clock.t0 ? "c.pause" : "c.start")}</button></div></div>`;
     }
     const per = m ? m.per : db.session.secs || 60;
     clockFor(`${c.id}:${m ? m.id : "gen"}:${d.log.length}`, per);
-    const cur = d.queue[0], log = d.log.filter((x) => x.mid === (m ? m.id : null));
+    const cur = Q(d)[0], log = d.log.filter((x) => x.mid === (m ? m.id : null));
     const rest = m ? m.total * 60 - spent(c, m) : 0;
-    return `${comPicker()}<div class="cab-card deb-head"><div>${m ? `<small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt.mod")}</h3><p class="mo-meta">${m.topic ? `«${esc(m.topic)}» · ` : ""}${t("c.total")} ${m.total} ${t("c.min")} · ${t("c.perSp")} ${m.per} ${t("c.s")} · <b id="dleft" data-rest="${rest}">${t("c.left")} ${fmt(rest)}</b></p>` : `<h3>${t("c.gen")}</h3>`}</div>
+    return `${comPicker()}${stack(c)}<div class="cab-card deb-head"><div>${m ? `<small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt." + m.type)}</h3><p class="mo-meta">${m.opp ? `${esc(cn(c, m.by))} ↔ ${esc(cn(c, m.opp))} · ` : ""}${m.topic ? `«${esc(m.topic)}» · ` : ""}${t("c.total")} ${m.total} ${t("c.min")} · ${t("c.perSp")} ${m.per} ${t("c.s")} · <b id="dleft" data-rest="${rest}">${t("c.left")} ${fmt(rest)}</b></p>` : `<h3>${t("c.gen")}</h3>`}</div>
         ${m ? `<button class="btn btn-ghost btn-s" id="dend">${t("c.endDeb")}</button>` : `<div class="field inline"><label for="ssec">${t("c.time")}</label><input id="ssec" type="number" min="15" max="300" step="15" value="${per}" style="width:90px"></div>`}</div>
       <div class="cab-grid" style="margin-top:18px">
         <div class="cab-card"><div class="speaker-now"><small class="muted">${cur ? t("c.now") : t("c.empty")}</small><b>${cur ? esc(cn(c, cur)) : "—"}</b>${ring()}</div>
           <div class="timer-row"><button class="btn btn-primary btn-s" id="sgo">${t(clock.t0 ? "c.pause" : "c.start")}</button><button class="btn btn-ghost btn-s" id="sdone"${cur ? "" : " disabled"}>${t("c.done")}</button></div>
           <div class="qbox"><small class="muted">${t("c.qs")}</small><div class="wants">${d.q.length ? d.q.map((n, i) => `<span class="want">${esc(cn(c, n))} <button class="x" data-qdel="${i}" aria-label="${t("c.del")}">×</button></span>`).join("") : `<span class="muted">${t("c.noQ")}</span>`}</div>
             <div class="timer-row"><select id="qadd" aria-label="${t("c.country")}"${cur ? "" : " disabled"}>${cOpts(c, vs.filter((n) => n !== cur))}</select><button class="btn btn-ghost btn-s" id="qbtn"${cur ? "" : " disabled"}>${t("c.qAdd")}</button></div></div></div>
-        <div class="cab-card"><h3>${t("c.queue")}</h3><ol class="slist">${d.queue.map((n, i) => `<li><span>${esc(cn(c, n))}</span>${i ? `<button class="x" data-sdel="${i}" aria-label="${t("c.del")}">×</button>` : ""}</li>`).join("") || `<li class="muted" style="list-style:none">${t("c.empty")}</li>`}</ol>
+        <div class="cab-card"><h3>${t("c.queue")}</h3><ol class="slist">${Q(d).map((n, i) => `<li><span>${esc(cn(c, n))}</span>${i ? `<button class="x" data-sdel="${i}" aria-label="${t("c.del")}">×</button>` : ""}</li>`).join("") || `<li class="muted" style="list-style:none">${t("c.empty")}</li>`}</ol>
           <div class="timer-row"><select id="sadd" aria-label="${t("c.country")}">${cOpts(c, vs)}</select><button class="btn btn-ghost btn-s" id="sbtn">${t("c.toQueue")}</button></div></div></div>
       <div class="cab-card" style="margin-top:18px"><h3>${t("c.spoke")}</h3>${log.length ? `<div class="table-wrap"><table class="tbl"><thead><tr><th>#</th><th>${t("c.country")}</th><th>${t("c.used")}</th><th>${t("c.qFrom")}</th></tr></thead><tbody>
         ${log.map((x, i) => `<tr><td>${i + 1}</td><td><b>${esc(cn(c, x.n))}</b></td><td>${fmt(x.used)}</td><td>${x.q.length ? x.q.map((n) => esc(cn(c, n))).join(", ") : "—"}</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted">${t("c.noSpoke")}</p>`}</div>`;
@@ -497,7 +518,7 @@
       mof.onsubmit = (e) => {
         e.preventDefault();
         const c = chairCom(), type = $("#mo-t").value, k = MT[type];
-        (db.motions[c.id] ??= []).push({ id: Date.now().toString(36), type, by: +$("#mo-by").value, topic: k.includes("topic") ? $("#mo-topic").value.trim() : "", total: k.includes("total") ? Math.max(1, +$("#mo-total").value || 15) : 0, per: k.includes("per") ? Math.max(15, +$("#mo-per").value || 60) : 0, votes: {}, res: null, at: Date.now() });
+        (db.motions[c.id] ??= []).push({ id: Date.now().toString(36), type, by: +$("#mo-by").value, topic: k.includes("topic") ? $("#mo-topic").value.trim() : "", total: k.includes("total") ? Math.max(1, +$("#mo-total").value || 15) : 0, per: k.includes("per") ? Math.max(15, +$("#mo-per").value || 60) : 0, opp: k.includes("opp") ? +$("#mo-opp").value : 0, votes: {}, res: null, at: Date.now() });
         save(); render();
       };
     }
@@ -508,12 +529,12 @@
     $$("[data-mfix]").forEach((b) => (b.onclick = () => {
       const m = mot(b.dataset.mfix), vd = verdict(m);
       if (vd === "tie") { m.votes = {}; m.revote = (m.revote || 0) + 1; openMo.add(m.id); }
-      else { m.res = vd; m.fin = { f: tally(m.votes, "f"), a: tally(m.votes, "a") }; vd === "pass" && (m.type === "mod" || m.type === "unmod") ? openMo.add(m.id) : openMo.delete(m.id); }
+      else { m.res = vd; m.fin = { f: tally(m.votes, "f"), a: tally(m.votes, "a") }; openMo.delete(m.id); if (isDeb(m) && !deb(chairCom()).mid) startDeb(chairCom(), m); }
       save(); render();
     }));
-    $$("[data-mres]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mres); m.res = b.dataset.v || null; m.res && !(m.res === "pass" && (m.type === "mod" || m.type === "unmod")) ? openMo.delete(m.id) : openMo.add(m.id); save(); render(); }));
+    $$("[data-mres]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mres), d = deb(chairCom()); if (d.mid === m.id) d.mid = null; d.done = d.done.filter((x) => x !== m.id); m.res = b.dataset.v || null; m.res && !(m.res === "pass" && (m.type === "mod" || m.type === "unmod")) ? openMo.delete(m.id) : openMo.add(m.id); save(); render(); }));
     $$("[data-mdel]").forEach((b) => (b.onclick = () => { const c = chairCom(); db.motions[c.id] = db.motions[c.id].filter((m) => m.id !== b.dataset.mdel); if (deb(c).mid === b.dataset.mdel) deb(c).mid = null; save(); render(); }));
-    $$("[data-mstart]").forEach((b) => (b.onclick = () => { const d = deb(chairCom()), m = mot(b.dataset.mstart); d.mid = m.id; d.q = []; d.queue = m.type === "mod" ? [m.by] : []; db.session.tab = "speakers"; save(); render(); }));
+    $$("[data-mstart]").forEach((b) => (b.onclick = () => { const c = chairCom(), d = deb(c), m = mot(b.dataset.mstart); if (d.mid !== m.id) { d.done = d.done.filter((x) => x !== m.id); startDeb(c, m); } db.session.tab = "speakers"; save(); render(); }));
     // дебаты
     if ($("#stm")) {
       const c = chairCom(), d = deb(c), m = curM(c), stm = $("#stm"), dl = $("#dleft");
@@ -532,15 +553,16 @@
       });
       $("#sdone") && ($("#sdone").onclick = () => {
         const per = m ? m.per : db.session.secs || 60;
-        d.log.push({ n: d.queue.shift(), used: Math.min(per, Math.max(0, per - left())), q: d.q, mid: m ? m.id : null }); d.q = [];
+        const sn = Q(d).shift(); if (m && m.type === "pingpong") Q(d).push(sn);
+        d.log.push({ n: sn, used: Math.min(per, Math.max(0, per - left())), q: d.q, mid: m ? m.id : null }); d.q = [];
         clock = { key: "", base: 0, t0: 0 }; save(); render();
       });
       $("#qbtn") && ($("#qbtn").onclick = () => { d.q.push(+$("#qadd").value); save(); render(); });
       $$("[data-qdel]").forEach((b) => (b.onclick = () => { d.q.splice(+b.dataset.qdel, 1); save(); render(); }));
-      $$("[data-sdel]").forEach((b) => (b.onclick = () => { d.queue.splice(+b.dataset.sdel, 1); save(); render(); }));
-      $("#sbtn") && ($("#sbtn").onclick = () => { d.queue.push(+$("#sadd").value); save(); render(); });
+      $$("[data-sdel]").forEach((b) => (b.onclick = () => { Q(d).splice(+b.dataset.sdel, 1); save(); render(); }));
+      $("#sbtn") && ($("#sbtn").onclick = () => { Q(d).push(+$("#sadd").value); save(); render(); });
       $("#ssec") && ($("#ssec").onchange = () => { db.session.secs = Math.max(15, Math.min(300, +$("#ssec").value || 60)); clock.key = ""; save(); render(); });
-      $("#dend") && ($("#dend").onclick = () => { d.mid = null; d.q = []; clock = { key: "", base: 0, t0: 0 }; save(); render(); });
+      $("#dend") && ($("#dend").onclick = () => { endDeb(c); save(); render(); });
     }
     // резолюция
     $$("[data-vote]").forEach((b) => (b.onclick = () => { const v = (db.votes[chairCom().id] ??= {}), n = b.dataset.vote; v[n] === b.dataset.v ? delete v[n] : (v[n] = b.dataset.v); save(); render(); }));
