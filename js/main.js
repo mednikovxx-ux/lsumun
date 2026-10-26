@@ -14,7 +14,7 @@
   const head = document.createElement("header");
   head.className = "site-head";
   head.innerHTML = `<div class="wrap head-in">
-    <a class="brand" href="index.html"><img src="img/emblem.png" alt=""><span><b data-i18n="brand.name"></b><small data-i18n="brand.sub"></small></span></a>
+    <a class="brand" href="index.html"><img src="img/emblem-white.png" alt=""><span><b data-i18n="brand.name"></b><small data-i18n="brand.sub"></small></span></a>
     <nav class="nav" id="nav">${links.map(([h, k, p]) => `<a href="${h}" data-i18n="${k}"${p === page ? ' aria-current="page"' : ""}></a>`).join("")}</nav>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-l="ru">RU</button><button type="button" data-l="en">EN</button></div>
     <a class="btn btn-primary btn-s head-cab" href="cabinet.html">${user}<span data-i18n="nav.cabinet"></span></a>

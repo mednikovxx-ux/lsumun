@@ -8,7 +8,7 @@
 <link rel="icon" href="img/emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=1793010370">
+<link rel="stylesheet" href="css/style.css?v=1793010580">
 </head>
 <body data-page="prepare">
 <main>
@@ -31,14 +31,14 @@
   </div></section>
   <section style="padding-top:0"><div class="wrap" id="path"></div></section>
 </main>
-<script src="js/data.js?v=1793010370"></script>
+<script src="js/data.js?v=1793010580"></script>
 <script src="js/i18n.js"></script>
-<script src="js/main.js?v=1793010370"></script>
-<script src="js/prepare.js?v=1793010370"></script>
+<script src="js/main.js?v=1793010580"></script>
+<script src="js/prepare.js?v=1793010580"></script>
 <script>
   // Говорящий микрофон: фразы, с которых делегат начинает выступление
   (() => {
-    const P = { ru: ["Уважаемый председатель…", "Уважаемые делегаты…", "Делегация предлагает…", "Мы поддерживаем…", "Предложение о модерированных дебатах!"], en: ["Honourable Chair…", "Distinguished delegates…", "Our delegation proposes…", "We support…", "Motion for a moderated caucus!"] };
+    const P = { ru: ["Уважаемый председатель…", "Уважаемые делегаты…", "Делегация предлагает…", "Мы поддерживаем…", "Предложение о контролируемых дебатах!"], en: ["Honourable Chair…", "Distinguished delegates…", "Our delegation proposes…", "We support…", "Motion for a moderated caucus!"] };
     const el = document.getElementById("mic-text"); let i = 0;
     const tick = () => { el.classList.remove("on"); setTimeout(() => { el.textContent = (P[LANG] || P.ru)[i++ % 5]; el.classList.add("on"); }, 250); };
     tick(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(tick, 2600);
