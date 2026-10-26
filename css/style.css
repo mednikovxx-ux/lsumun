@@ -990,3 +990,14 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .pnote { background: #fdf1dc; border-radius: 12px; padding: 12px 14px; }
 .pnote p { margin-top: 4px; }
 .ptext { white-space: pre-wrap; background: var(--paper); border-radius: 12px; padding: 14px 16px; margin-top: 10px; max-height: 420px; overflow: auto; line-height: 1.55; }
+
+/* Перекличка цветом: присутствует — зелёный, присутствует и голосует — тёмно-зелёный, отсутствует — красный */
+.seg3 button[data-roll][data-v="p"][aria-pressed="true"] { background: #2fae6b; border-color: #2fae6b; color: #fff; }
+.seg3 button[data-roll][data-v="pv"][aria-pressed="true"] { background: #156b3e; border-color: #156b3e; color: #fff; }
+.seg3 button[data-roll][data-v="a"][aria-pressed="true"] { background: #d64545; border-color: #d64545; color: #fff; }
+.roll-row:has([data-roll][data-v="p"][aria-pressed="true"]) { background: #e6f6ed; box-shadow: inset 4px 0 0 #2fae6b; }
+.roll-row:has([data-roll][data-v="pv"][aria-pressed="true"]) { background: #d6eddf; box-shadow: inset 4px 0 0 #156b3e; }
+.roll-row:has([data-roll][data-v="a"][aria-pressed="true"]) { background: #fbe7e7; box-shadow: inset 4px 0 0 #d64545; }
+.seg3 button:is([data-vote], [data-mv])[data-v="f"][aria-pressed="true"] { background: #2fae6b; border-color: #2fae6b; color: #fff; }
+.seg3 button:is([data-vote], [data-mv])[data-v="a"][aria-pressed="true"] { background: #d64545; border-color: #d64545; color: #fff; }
+.seg3 button[data-vote][data-v="x"][aria-pressed="true"] { background: #7a8599; border-color: #7a8599; color: #fff; }
