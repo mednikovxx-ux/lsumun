@@ -1015,3 +1015,4 @@ details.mo[open] .chev { transform: rotate(180deg); }
 .mo-body { display: grid; gap: 14px; padding: 0 18px 18px; border-top: 1px solid var(--line); padding-top: 14px; }
 @media (max-width: 600px) { .mo-sum { grid-template-columns: auto 1fr; } .mo-r { grid-column: 1 / -1; justify-content: flex-end; } }
 .mo-tl { font-size: 14px; color: var(--ink-2); white-space: nowrap; }
+.tbl.rank tr.top td { background: #eef6fc; } .tbl.rank tr.top:first-child td { background: #fff4d6; } .tbl.rank td, .tbl.rank th { padding: 12px 12px; }

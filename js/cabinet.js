@@ -6,19 +6,19 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
   Object.assign(I18N.ru, {
-    "c.tab.home": "Главная", "c.free2": "свободно", "c.taken": "занята", "c.pick": "Нажмите на свободную страну — она подставится в заявку.", "c.ofN": "из", "c.chosen": "Выбрано", "c.tab.overview": "Обзор", "c.tab.app": "Заявка", "c.tab.paper": "Позиция и речь", "c.tab.schedule": "Расписание", "c.tab.inbox": "Сообщения",
+    "c.tab.home": "Главная", "c.free2": "свободно", "c.taken": "занята", "c.pick": "Нажмите на свободную страну — она подставится в заявку.", "c.ofN": "из", "c.chosen": "Выбрано", "c.tab.overview": "Обзор", "c.tab.app": "Заявка", "c.tab.paper": "Position Paper и речь", "c.tab.schedule": "Расписание", "c.tab.inbox": "Сообщения",
     "c.tab.roster": "Комитет", "c.tab.apps": "Заявки", "c.tab.roll": "Перекличка", "c.tab.speakers": "Ораторы", "c.tab.vote": "Голосование", "c.tab.awards": "Награды",
     "c.session": "IV сессия · весна 2027", "c.demoCom": "Комитеты 2027 года ещё не объявлены — в демо используются комитеты 2026 года.",
-    "c.st1": "Заявка", "c.st2": "Страна", "c.st3": "Позиционное письмо", "c.st4": "Регистрация на месте", "c.st5": "Сертификат",
+    "c.st1": "Заявка", "c.st2": "Страна", "c.st3": "Позиционный документ", "c.st4": "Регистрация на месте", "c.st5": "Сертификат",
     "c.yourCountry": "Ваша страна", "c.notAssigned": "ещё не назначена", "c.yourCom": "Комитет", "c.nextStep": "Следующий шаг",
-    "c.ns.app": "Заполните заявку: комитет и три страны на выбор.", "c.ns.wait": "Заявка у председателя. Страну назначат и пришлют сообщение.", "c.ns.paper": "Загрузите позиционное письмо до начала сессии.", "c.ns.ready": "Всё готово. До встречи на открытии!",
+    "c.ns.app": "Заполните заявку: комитет и три страны на выбор.", "c.ns.wait": "Заявка у председателя. Страну назначат и пришлют сообщение.", "c.ns.paper": "Отправьте позиционный документ (Position Paper) на проверку до начала сессии.", "c.ns.ready": "Всё готово. До встречи на открытии!",
     "c.fio": "ФИО", "c.uni": "Вуз", "c.year": "Курс", "c.contact": "Телефон или ВК", "c.pref": "Страны по приоритету", "c.exp": "Опыт моделей ООН", "c.exp0": "Впервые", "c.exp1": "1–2 модели", "c.exp2": "3 и больше",
     "c.save": "Отправить заявку", "c.saved": "Заявка сохранена", "c.update": "Обновить заявку",
-    "c.paper": "Позиционное письмо", "c.paperHint": "До 2 страниц: позиция страны, что она предлагает, с кем готова работать. Напишите здесь или приложите .docx / .pdf и отправьте председателю на проверку.",
+    "c.paper": "Позиционный документ · Position Paper", "c.paperHint": "До 2 страниц: позиция страны, что она предлагает, с кем готова работать. Напишите здесь или приложите .docx / .pdf и отправьте председателю на проверку.",
     "c.upload": "Выбрать файл", "c.uploaded": "Загружено", "c.speech": "Вступительная речь", "c.speechHint": "Напишите речь и проверьте, укладываетесь ли в минуту.", "c.start": "Старт", "c.stop": "Стоп", "c.words": "слов", "c.approx": "≈ при чтении вслух",
     "c.schedNote": "Расписание 2027 года появится ближе к сессии. Пока — как всё было в 2026.", "c.day": "День",
     "c.noMsg": "Сообщений пока нет.", "c.from": "Председатель",
-    "c.pickCom": "Ваш комитет", "c.country": "Страна", "c.delegate": "Делегат", "c.status": "Статус", "c.free": "свободна", "c.paperOk": "письмо есть", "c.paperNo": "нет письма",
+    "c.pickCom": "Ваш комитет", "c.country": "Страна", "c.delegate": "Делегат", "c.status": "Статус", "c.free": "свободна", "c.paperOk": "документ есть", "c.paperNo": "нет документа",
     "c.assign": "Назначить", "c.assignTo": "Назначить страну", "c.noApps": "Новых заявок нет. Заявки делегатов появятся здесь.", "c.prefs": "Хочет", "c.assigned": "Назначено",
     "c.present": "Присутствует", "c.pv": "Присутствует и голосует", "c.absent": "Отсутствует", "c.quorum": "Кворум", "c.simple": "Простое большинство", "c.twothirds": "Две трети", "c.reset": "Сбросить",
     "c.addSpeaker": "Добавить в список", "c.next": "Следующий", "c.time": "Время на речь, с", "c.list": "Список ораторов", "c.empty": "Список пуст",
@@ -28,19 +28,19 @@
     "c.hint.role": "Председатели входят по приглашению секретариата. В демо можно войти и так.",
   });
   Object.assign(I18N.en, {
-    "c.tab.home": "Home", "c.free2": "open", "c.taken": "taken", "c.pick": "Click an open country to put it into your application.", "c.ofN": "of", "c.chosen": "Selected", "c.tab.overview": "Overview", "c.tab.app": "Application", "c.tab.paper": "Position & speech", "c.tab.schedule": "Schedule", "c.tab.inbox": "Messages",
+    "c.tab.home": "Home", "c.free2": "open", "c.taken": "taken", "c.pick": "Click an open country to put it into your application.", "c.ofN": "of", "c.chosen": "Selected", "c.tab.overview": "Overview", "c.tab.app": "Application", "c.tab.paper": "Position Paper & speech", "c.tab.schedule": "Schedule", "c.tab.inbox": "Messages",
     "c.tab.roster": "Committee", "c.tab.apps": "Applications", "c.tab.roll": "Roll call", "c.tab.speakers": "Speakers", "c.tab.vote": "Voting", "c.tab.awards": "Awards",
     "c.session": "4th session · spring 2027", "c.demoCom": "The 2027 committees are not announced yet — the demo uses the 2026 committees.",
-    "c.st1": "Application", "c.st2": "Country", "c.st3": "Position paper", "c.st4": "On-site check-in", "c.st5": "Certificate",
+    "c.st1": "Application", "c.st2": "Country", "c.st3": "Position Paper", "c.st4": "On-site check-in", "c.st5": "Certificate",
     "c.yourCountry": "Your country", "c.notAssigned": "not assigned yet", "c.yourCom": "Committee", "c.nextStep": "Next step",
-    "c.ns.app": "Fill in the application: a committee and three countries.", "c.ns.wait": "Your application is with the chair. You'll get a message once a country is assigned.", "c.ns.paper": "Upload your position paper before the session.", "c.ns.ready": "All set. See you at the opening!",
+    "c.ns.app": "Fill in the application: a committee and three countries.", "c.ns.wait": "Your application is with the chair. You'll get a message once a country is assigned.", "c.ns.paper": "Send your Position Paper for review before the session.", "c.ns.ready": "All set. See you at the opening!",
     "c.fio": "Full name", "c.uni": "University", "c.year": "Year of study", "c.contact": "Phone or VK", "c.pref": "Countries by priority", "c.exp": "Model UN experience", "c.exp0": "First time", "c.exp1": "1–2 conferences", "c.exp2": "3 or more",
     "c.save": "Submit application", "c.saved": "Application saved", "c.update": "Update application",
-    "c.paper": "Position paper", "c.paperHint": "Up to 2 pages: your country's position, proposals and partners. Write it here or attach a .docx / .pdf and send it to the chair for review.",
+    "c.paper": "Position Paper", "c.paperHint": "Up to 2 pages: your country's position, proposals and partners. Write it here or attach a .docx / .pdf and send it to the chair for review.",
     "c.upload": "Choose file", "c.uploaded": "Uploaded", "c.speech": "Opening speech", "c.speechHint": "Write your speech and check it fits in a minute.", "c.start": "Start", "c.stop": "Stop", "c.words": "words", "c.approx": "≈ read aloud",
     "c.schedNote": "The 2027 schedule will appear closer to the session. For now — how it went in 2026.", "c.day": "Day",
     "c.noMsg": "No messages yet.", "c.from": "Chair",
-    "c.pickCom": "Your committee", "c.country": "Country", "c.delegate": "Delegate", "c.status": "Status", "c.free": "open", "c.paperOk": "paper in", "c.paperNo": "no paper",
+    "c.pickCom": "Your committee", "c.country": "Country", "c.delegate": "Delegate", "c.status": "Status", "c.free": "open", "c.paperOk": "paper in", "c.paperNo": "no Position Paper",
     "c.assign": "Assign", "c.assignTo": "Assign a country", "c.noApps": "No new applications. Delegates' applications will appear here.", "c.prefs": "Wants", "c.assigned": "Assigned",
     "c.present": "Present", "c.pv": "Present and voting", "c.absent": "Absent", "c.quorum": "Quorum", "c.simple": "Simple majority", "c.twothirds": "Two-thirds", "c.reset": "Reset",
     "c.addSpeaker": "Add to list", "c.next": "Next", "c.time": "Speaking time, s", "c.list": "Speakers' list", "c.empty": "The list is empty",
@@ -184,10 +184,13 @@
     "c.startDeb": "Начать дебаты", "c.endDeb": "Завершить дебаты", "c.gen": "Общий список ораторов", "c.left": "осталось", "c.total": "всего", "c.perSp": "на оратора",
     "c.now": "Сейчас говорит", "c.pause": "Пауза", "c.done": "Речь окончена", "c.qs": "Вопросы к оратору", "c.qAdd": "Отметить вопрос", "c.noQ": "Вопросов пока нет",
     "c.queue": "Очередь", "c.toQueue": "В очередь", "c.spoke": "Выступили", "c.used": "Время", "c.qFrom": "Вопросы от", "c.noSpoke": "Пока никто не выступал.", "c.timeUp": "Время дебатов вышло",
-    "c.tab.papers": "Позиционки", "c.pText": "Текст письма", "c.pTextHint": "Можно написать прямо здесь или приложить файл — или и то и другое.", "c.pFile": "Файл", "c.pSend": "Отправить на проверку", "c.pResend": "Отправить новую версию",
+    "c.tab.papers": "Position Papers", "c.pText": "Текст документа", "c.pTextHint": "Можно написать прямо здесь или приложить файл — или и то и другое.", "c.pFile": "Файл", "c.pSend": "Отправить на проверку", "c.pResend": "Отправить новую версию",
     "c.ps.none": "не отправлено", "c.ps.review": "на проверке", "c.ps.ok": "принято", "c.ps.fix": "на доработку", "c.pv2": "версия", "c.pSent": "Отправлено", "c.pChairNote": "Комментарий председателя",
-    "c.pAccept": "Принять", "c.pReturn": "На доработку", "c.pNote": "Комментарий делегату", "c.pOpen": "Открыть файл", "c.pRead": "Текст письма", "c.noPapers": "Пока никто не отправил позиционное письмо.", "c.pNoFile": "Файл в демо не сохраняется — только название.",
-    "c.ns.review": "Письмо на проверке у председателя. Ответ придёт в сообщения.", "c.ns.fix": "Председатель вернул письмо на доработку — посмотрите комментарий и отправьте новую версию.",
+    "c.pAccept": "Принять", "c.pReturn": "На доработку", "c.pNote": "Комментарий делегату", "c.pOpen": "Открыть файл", "c.pRead": "Текст документа", "c.noPapers": "Пока никто не отправил позиционный документ.", "c.pNoFile": "Файл в демо не сохраняется — только название.",
+    "c.ns.review": "Документ на проверке у председателя. Ответ придёт в сообщения.", "c.ns.fix": "Председатель вернул документ на доработку — посмотрите комментарий и отправьте новую версию.",
+    "c.sponsors": "Кто внёс проект (авторы)", "c.addSp": "Добавить автора", "c.noSp": "Авторы не отмечены",
+    "c.rank": "Рейтинг активности", "c.rankHint": "Считается сам по ходу заседания. Баллы: предложил моушен — 1, моушен прошёл — ещё 2, выступил — 1, задал вопрос — 0,5, автор проекта резолюции — 3, резолюция принята — ещё 2, Position Paper принят — 2. Окончательное решение — за председателем.",
+    "c.rMo": "Моушены", "c.rPass": "Прошло", "c.rSp": "Речи", "c.rQ": "Вопросы", "c.rRes": "Резолюции", "c.rPP": "PP", "c.rPts": "Баллы", "c.rEmpty": "Пока нет данных: рейтинг появится, когда на заседании начнут вносить моушены и выступать.", "c.rFill": "Подставить из рейтинга", "c.rAuto": "предложено по рейтингу",
     "c.doc": "Документ", "c.record": "Записать в протокол", "c.protocol": "Протокол", "c.noAbst": "«Присутствует и голосует» — воздерживаться нельзя",
   });
   Object.assign(I18N.en, {
@@ -201,16 +204,20 @@
     "c.startDeb": "Start debate", "c.endDeb": "End debate", "c.gen": "General speakers' list", "c.left": "left", "c.total": "total", "c.perSp": "per speaker",
     "c.now": "Now speaking", "c.pause": "Pause", "c.done": "Speech over", "c.qs": "Questions to the speaker", "c.qAdd": "Mark a question", "c.noQ": "No questions yet",
     "c.queue": "Queue", "c.toQueue": "Add to queue", "c.spoke": "Spoke", "c.used": "Time", "c.qFrom": "Questions from", "c.noSpoke": "Nobody has spoken yet.", "c.timeUp": "Debate time is up",
-    "c.tab.papers": "Position papers", "c.pText": "Paper text", "c.pTextHint": "Write it right here or attach a file — or both.", "c.pFile": "File", "c.pSend": "Send for review", "c.pResend": "Send a new version",
+    "c.tab.papers": "Position Papers", "c.pText": "Paper text", "c.pTextHint": "Write it right here or attach a file — or both.", "c.pFile": "File", "c.pSend": "Send for review", "c.pResend": "Send a new version",
     "c.ps.none": "not sent", "c.ps.review": "under review", "c.ps.ok": "accepted", "c.ps.fix": "needs revision", "c.pv2": "version", "c.pSent": "Sent", "c.pChairNote": "Chair's comment",
-    "c.pAccept": "Accept", "c.pReturn": "Return for revision", "c.pNote": "Comment to the delegate", "c.pOpen": "Open file", "c.pRead": "Paper text", "c.noPapers": "Nobody has sent a position paper yet.", "c.pNoFile": "In the demo the file itself is not stored — only its name.",
+    "c.pAccept": "Accept", "c.pReturn": "Return for revision", "c.pNote": "Comment to the delegate", "c.pOpen": "Open file", "c.pRead": "Paper text", "c.noPapers": "Nobody has sent a Position Paper yet.", "c.pNoFile": "In the demo the file itself is not stored — only its name.",
     "c.ns.review": "Your paper is with the chair. The answer will come to Messages.", "c.ns.fix": "The chair returned your paper for revision — read the comment and send a new version.",
+    "c.sponsors": "Submitted by (sponsors)", "c.addSp": "Add sponsor", "c.noSp": "No sponsors marked",
+    "c.rank": "Activity ranking", "c.rankHint": "Calculated automatically during the session. Points: proposed a motion — 1, motion passed — 2 more, gave a speech — 1, asked a question — 0.5, sponsored a draft resolution — 3, resolution adopted — 2 more, Position Paper accepted — 2. The final decision is the chair's.",
+    "c.rMo": "Motions", "c.rPass": "Passed", "c.rSp": "Speeches", "c.rQ": "Questions", "c.rRes": "Resolutions", "c.rPP": "PP", "c.rPts": "Points", "c.rEmpty": "No data yet: the ranking appears once motions and speeches start.", "c.rFill": "Fill from the ranking", "c.rAuto": "suggested by the ranking",
     "c.doc": "Document", "c.record": "Record in the minutes", "c.protocol": "Minutes", "c.noAbst": "“Present and voting” — cannot abstain",
   });
   db.motions ??= {};   // {com: [{id, type, by, topic, total, per, votes: {country: 'f'|'a'}, res: 'pass'|'fail'|null, at}]}
   db.debate ??= {};    // {com: {mid, queue: [country], q: [country], log: [{n, used, q, mid}]}}
   db.resdoc ??= {};    // {com: название проекта резолюции}
-  db.results ??= {};   // {com: [{doc, f, a, x, ok, at}]}
+  db.results ??= {};   // {com: [{doc, f, a, x, ok, at, sp: [country]}]}
+  db.ressp ??= {};     // {com: [country]} — авторы текущего проекта резолюции
   const C = {};
   const chairCom = () => com(db.session.com);
   const cn = (c, n) => L(c.countries)[n - 1].split(" — ")[0];
@@ -345,15 +352,33 @@
     const ok = f + a > 0 && f >= nd, hist = db.results[c.id] || [];
     return `${comPicker()}${Object.keys(r).length ? (k.ok ? "" : `<p class="cab-demo warnc">${t("c.noQuorum")}</p>`) : `<p class="cab-demo">${t("c.rollFirst")}</p>`}
       <div class="cab-card"><div class="field"><label for="rdoc">${t("c.doc")}</label><input id="rdoc" value="${esc(db.resdoc[c.id] || t("c.voteDoc"))}"></div>
+      <div class="field"><label for="spadd">${t("c.sponsors")}</label><div class="wants">${(db.ressp[c.id] || []).map((n, i) => `<span class="want">${esc(cn(c, n))} <button class="x" data-spdel="${i}" aria-label="${t("c.del")}">×</button></span>`).join("") || `<span class="muted">${t("c.noSp")}</span>`}</div>
+        <div class="timer-row" style="margin-top:8px"><select id="spadd">${cOpts(c, all(c).filter((n) => !(db.ressp[c.id] || []).includes(n)))}</select><button class="btn btn-ghost btn-s" id="spbtn">${t("c.addSp")}</button></div></div>
       <div class="kpis"><div><b>${f}</b><span>${t("c.for")}</span></div><div><b>${a}</b><span>${t("c.against")}</span></div><div><b>${x}</b><span>${t("c.abst")}</span></div><div><b class="${f + a ? (ok ? "okc" : "badc") : ""}">${f + a ? t(ok ? "c.passes" : "c.fails") : "—"}</b><span>${f + a ? `${nd} ${t("c.need")} · ${t("c.notVoted").toLowerCase()} ${Math.max(0, vs.length - f - a - x)}` : ""}</span></div></div></div>
       <div class="roll" style="margin-top:16px">${vs.map((n) => `<div class="roll-row"><b>${esc(cn(c, n))}${r[n] === "pv" ? ` <small class="muted" title="${t("c.noAbst")}">· ${t("c.pv").toLowerCase()}</small>` : ""}</b><div class="seg3">${[["f", "c.for"], ["a", "c.against"], ["x", "c.abst"]].map(([kk, l]) => `<button data-vote="${n}" data-v="${kk}" aria-pressed="${v[n] === kk}"${r[n] === "pv" && kk === "x" ? ` disabled title="${t("c.noAbst")}"` : ""}>${t(l)}</button>`).join("")}</div></div>`).join("")}</div>
       <div class="timer-row" style="margin-top:14px"><button class="btn btn-primary btn-s" id="vrec"${f + a + x ? "" : " disabled"}>${t("c.record")}</button><button class="btn btn-ghost btn-s" id="vreset">${t("c.reset")}</button></div>
-      ${hist.length ? `<div class="cab-card" style="margin-top:18px"><h3>${t("c.protocol")}</h3>${hist.slice().reverse().map((h) => `<p><span class="pill ${h.ok ? "ok" : "bad"}">${t(h.ok ? "c.passes" : "c.fails")}</span> <b>${esc(h.doc)}</b> <small class="muted">· ${hm(h.at)} · ${t("c.for")} ${h.f} · ${t("c.against")} ${h.a} · ${t("c.abst")} ${h.x}</small></p>`).join("")}</div>` : ""}`;
+      ${hist.length ? `<div class="cab-card" style="margin-top:18px"><h3>${t("c.protocol")}</h3>${hist.slice().reverse().map((h) => `<p><span class="pill ${h.ok ? "ok" : "bad"}">${t(h.ok ? "c.passes" : "c.fails")}</span> <b>${esc(h.doc)}</b>${h.sp?.length ? ` <small>(${h.sp.map((n) => esc(cn(c, n))).join(", ")})</small>` : ""} <small class="muted">· ${hm(h.at)} · ${t("c.for")} ${h.f} · ${t("c.against")} ${h.a} · ${t("c.abst")} ${h.x}</small></p>`).join("")}</div>` : ""}`;
+  };
+  // рейтинг активности для номинаций: считается из моушенов, речей, вопросов, резолюций и Position Paper
+  const score = (c) => {
+    const mo = db.motions[c.id] || [], log = (db.debate[c.id] || {}).log || [], res = db.results[c.id] || [], h = holders(c);
+    return all(c).map((n) => {
+      const r = { n, mo: mo.filter((m) => m.by === n).length, pass: mo.filter((m) => m.by === n && m.res === "pass").length, sp: log.filter((x) => x.n === n).length,
+        q: log.reduce((s, x) => s + x.q.filter((y) => y === n).length, 0), res: res.filter((x) => (x.sp || []).includes(n)).length, resOk: res.filter((x) => x.ok && (x.sp || []).includes(n)).length, pp: h[n]?.paper?.status === "ok" ? 1 : 0 };
+      r.pts = r.mo + 2 * r.pass + r.sp + 0.5 * r.q + 3 * r.res + 2 * r.resOk + 2 * r.pp;
+      return r;
+    }).filter((r) => r.pts > 0).sort((x, y) => y.pts - x.pts);
   };
   C.awards = () => {
-    const c = chairCom(), w = db.awards[c.id] || {};
-    const sel = (k) => `<div class="field"><label for="aw-${k}">${t("c." + k)}</label><select id="aw-${k}"><option value="">—</option>${all(c).map((n) => `<option value="${n}"${+w[k] === n ? " selected" : ""}>${esc(cn(c, n))}</option>`).join("")}</select></div>`;
-    return `${comPicker()}<form class="cab-card" id="awf">${sel("best")}${sel("outstanding")}${sel("honorable")}
+    const c = chairCom(), w = db.awards[c.id] || {}, sc = score(c), saved = !!db.awards[c.id];
+    const auto = { best: sc[0]?.n, outstanding: sc[1]?.n, honorable: sc[2]?.n };
+    const sel = (k) => { const v = saved ? +w[k] : auto[k]; return `<div class="field"><label for="aw-${k}">${t("c." + k)}${!saved && v ? ` <small class="muted">· ${t("c.rAuto")}</small>` : ""}</label><select id="aw-${k}"><option value="">—</option>${all(c).map((n) => `<option value="${n}"${v === n ? " selected" : ""}>${esc(cn(c, n))}</option>`).join("")}</select></div>`; };
+    const nm = (r) => { const a = h0[r.n]; return `<b>${esc(cn(c, r.n))}</b>${a ? `<br><small class="muted">${esc(a.fio)}</small>` : ""}`; }, h0 = holders(c);
+    const rank = `<div class="cab-card" style="margin-bottom:18px"><h3>${t("c.rank")}</h3><p class="muted">${t("c.rankHint")}</p>
+      ${sc.length ? `<div class="table-wrap"><table class="tbl rank"><thead><tr><th>#</th><th>${t("c.country")}</th><th>${t("c.rMo")}</th><th>${t("c.rPass")}</th><th>${t("c.rSp")}</th><th>${t("c.rQ")}</th><th>${t("c.rRes")}</th><th>${t("c.rPP")}</th><th>${t("c.rPts")}</th></tr></thead><tbody>
+        ${sc.map((r, i) => `<tr class="${i < 3 ? "top" : ""}"><td>${i + 1}</td><td>${nm(r)}</td><td>${r.mo}</td><td>${r.pass}</td><td>${r.sp}</td><td>${r.q}</td><td>${r.res}${r.resOk ? ` <small class="okc">(${r.resOk}✓)</small>` : ""}</td><td>${r.pp ? "✓" : "—"}</td><td><b>${String(r.pts).replace(".", LANG === "en" ? "." : ",")}</b></td></tr>`).join("")}</tbody></table></div>
+        <div><button class="btn btn-ghost btn-s" type="button" id="rfill">${t("c.rFill")}</button></div>` : `<p class="muted">${t("c.rEmpty")}</p>`}</div>`;
+    return `${comPicker()}${rank}<form class="cab-card" id="awf">${sel("best")}${sel("outstanding")}${sel("honorable")}
       <div class="field"><label for="aw-note">${t("c.note")}</label><textarea id="aw-note">${esc(w.note || "")}</textarea></div>
       <button class="btn btn-primary btn-s">${t("c.save").split(" ")[0]}</button> <span class="ok" id="aok" hidden>${t("c.awardsSaved")}</span></form>`;
   };
@@ -398,7 +423,7 @@
         save(); render(); $("#okm") && ($("#okm").hidden = false);
       };
     }
-    // письмо и речь
+    // позиционный документ и речь
     const pf = $("#pf");
     if (pf) {
       if (!myApp()?.at) { pf.closest("label").onclick = (e) => { e.preventDefault(); db.session.tab = "app"; save(); render(); }; }
@@ -436,7 +461,7 @@
       const a = db.apps.find((x) => x.email === b.dataset.assign), sel = $(`select[data-app="${CSS.escape(b.dataset.assign)}"]`);
       a.country = +sel.value;
       const c = com(a.com);
-      db.msgs.push({ to: a.email, at: Date.now(), text: (LANG === "en" ? `You represent ${L(c.countries)[a.country - 1].split(" — ")[0]} in the ${L(c.name)}. Please upload your position paper.` : `Вы представляете страну: ${L(c.countries)[a.country - 1].split(" — ")[0]} (${L(c.name)}). Загрузите позиционное письмо в кабинете.`) });
+      db.msgs.push({ to: a.email, at: Date.now(), text: (LANG === "en" ? `You represent ${L(c.countries)[a.country - 1].split(" — ")[0]} in the ${L(c.name)}. Please send your Position Paper for review.` : `Вы представляете страну: ${L(c.countries)[a.country - 1].split(" — ")[0]} (${L(c.name)}). Отправьте позиционный документ (Position Paper) на проверку в кабинете.`) });
       save(); render();
     }));
     const mf = $("#msgf");
@@ -457,7 +482,7 @@
     $$("[data-prev]").forEach((b) => (b.onclick = () => {
       const a = db.apps.find((x) => x.email === b.dataset.prev), note = document.getElementById("pn-" + a.email).value.trim(), ok = b.dataset.v === "ok";
       Object.assign(a.paper, { status: b.dataset.v, note, checked: Date.now() });
-      db.msgs.push({ to: a.email, at: Date.now(), text: (LANG === "en" ? (ok ? "Your position paper is accepted." : "Your position paper needs revision.") : ok ? "Позиционное письмо принято." : "Позиционное письмо нужно доработать.") + (note ? " " + note : "") });
+      db.msgs.push({ to: a.email, at: Date.now(), text: (LANG === "en" ? (ok ? "Your Position Paper is accepted." : "Your Position Paper needs revision.") : ok ? "Позиционный документ принят." : "Позиционный документ нужно доработать.") + (note ? " " + note : "") });
       save(); render();
     }));
     // моушены
@@ -476,7 +501,7 @@
     $$("[data-mv]").forEach((b) => (b.onclick = () => { const [id, n] = b.dataset.mv.split(":"), m = mot(id); m.votes[n] = m.votes[n] === b.dataset.v ? undefined : b.dataset.v; if (!m.votes[n]) delete m.votes[n]; save(); render(); }));
     $$("[data-mrest]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mrest); voters(chairCom()).forEach((n) => (m.votes[n] ??= b.dataset.v)); save(); render(); }));
     $$("details[data-mo]").forEach((d) => d.addEventListener("toggle", () => (d.open ? openMo.add(d.dataset.mo) : openMo.delete(d.dataset.mo))));
-    $$("[data-mres]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mres); m.res = b.dataset.v || null; m.res ? openMo.delete(m.id) : openMo.add(m.id); save(); render(); }));
+    $$("[data-mres]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mres); m.res = b.dataset.v || null; m.res && !(m.res === "pass" && (m.type === "mod" || m.type === "unmod")) ? openMo.delete(m.id) : openMo.add(m.id); save(); render(); }));
     $$("[data-mdel]").forEach((b) => (b.onclick = () => { const c = chairCom(); db.motions[c.id] = db.motions[c.id].filter((m) => m.id !== b.dataset.mdel); if (deb(c).mid === b.dataset.mdel) deb(c).mid = null; save(); render(); }));
     $$("[data-mstart]").forEach((b) => (b.onclick = () => { const d = deb(chairCom()), m = mot(b.dataset.mstart); d.mid = m.id; d.q = []; d.queue = m.type === "mod" ? [m.by] : []; db.session.tab = "speakers"; save(); render(); }));
     // дебаты
@@ -511,8 +536,13 @@
     $("#vreset") && ($("#vreset").onclick = () => { delete db.votes[chairCom().id]; save(); render(); });
     $("#vrec") && ($("#vrec").onclick = () => {
       const c = chairCom(), v = db.votes[c.id] || {}, f = tally(v, "f"), a = tally(v, "a");
-      (db.results[c.id] ??= []).push({ doc: $("#rdoc").value.trim() || t("c.voteDoc"), f, a, x: tally(v, "x"), ok: f + a > 0 && f >= Math.ceil(((f + a) * 2) / 3), at: Date.now() });
-      delete db.votes[c.id]; save(); render();
+      (db.results[c.id] ??= []).push({ doc: $("#rdoc").value.trim() || t("c.voteDoc"), f, a, x: tally(v, "x"), ok: f + a > 0 && f >= Math.ceil(((f + a) * 2) / 3), at: Date.now(), sp: db.ressp[c.id] || [] });
+      delete db.votes[c.id]; delete db.ressp[c.id]; save(); render();
+    });
+    $("#spbtn") && ($("#spbtn").onclick = () => { const c = chairCom(), n = +$("#spadd").value; if (n) (db.ressp[c.id] ??= []).push(n); save(); render(); });
+    $$("[data-spdel]").forEach((b) => (b.onclick = () => { db.ressp[chairCom().id].splice(+b.dataset.spdel, 1); save(); render(); }));
+    $("#rfill") && ($("#rfill").onclick = () => {
+      score(chairCom()).slice(0, 3).forEach((r, i) => ($("#aw-" + ["best", "outstanding", "honorable"][i]).value = r.n));
     });
     // награды
     const awf = $("#awf");
