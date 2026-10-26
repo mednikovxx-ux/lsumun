@@ -939,3 +939,4 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 @media (max-width: 760px) { .seal { width: 92px; align-self: start; } .hf-head .kicker { font-size: 11px; } .hf-top .hf-row { grid-template-columns: minmax(0, 1fr) auto; } }
 .hf-title .hl path { vector-effect: none; stroke-width: 9; }
 .stat b, .facts b { font-variant-numeric: tabular-nums; display: inline-block; }
+@media (max-width: 1520px) and (min-width: 1301px) { .brand span { display: none; } .nav a { padding: 8px 11px; } }
