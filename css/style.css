@@ -987,3 +987,6 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .qbox { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
 .slist li { display: list-item; }
 .slist li span { margin-right: 6px; }
+.pnote { background: #fdf1dc; border-radius: 12px; padding: 12px 14px; }
+.pnote p { margin-top: 4px; }
+.ptext { white-space: pre-wrap; background: var(--paper); border-radius: 12px; padding: 14px 16px; margin-top: 10px; max-height: 420px; overflow: auto; line-height: 1.55; }

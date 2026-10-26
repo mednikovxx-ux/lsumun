@@ -14,7 +14,7 @@
     "c.ns.app": "Заполните заявку: комитет и три страны на выбор.", "c.ns.wait": "Заявка у председателя. Страну назначат и пришлют сообщение.", "c.ns.paper": "Загрузите позиционное письмо до начала сессии.", "c.ns.ready": "Всё готово. До встречи на открытии!",
     "c.fio": "ФИО", "c.uni": "Вуз", "c.year": "Курс", "c.contact": "Телефон или ВК", "c.pref": "Страны по приоритету", "c.exp": "Опыт моделей ООН", "c.exp0": "Впервые", "c.exp1": "1–2 модели", "c.exp2": "3 и больше",
     "c.save": "Отправить заявку", "c.saved": "Заявка сохранена", "c.update": "Обновить заявку",
-    "c.paper": "Позиционное письмо", "c.paperHint": "Файл .docx или .pdf, до 2 страниц: позиция страны, что она предлагает, с кем готова работать.",
+    "c.paper": "Позиционное письмо", "c.paperHint": "До 2 страниц: позиция страны, что она предлагает, с кем готова работать. Напишите здесь или приложите .docx / .pdf и отправьте председателю на проверку.",
     "c.upload": "Выбрать файл", "c.uploaded": "Загружено", "c.speech": "Вступительная речь", "c.speechHint": "Напишите речь и проверьте, укладываетесь ли в минуту.", "c.start": "Старт", "c.stop": "Стоп", "c.words": "слов", "c.approx": "≈ при чтении вслух",
     "c.schedNote": "Расписание 2027 года появится ближе к сессии. Пока — как всё было в 2026.", "c.day": "День",
     "c.noMsg": "Сообщений пока нет.", "c.from": "Председатель",
@@ -36,7 +36,7 @@
     "c.ns.app": "Fill in the application: a committee and three countries.", "c.ns.wait": "Your application is with the chair. You'll get a message once a country is assigned.", "c.ns.paper": "Upload your position paper before the session.", "c.ns.ready": "All set. See you at the opening!",
     "c.fio": "Full name", "c.uni": "University", "c.year": "Year of study", "c.contact": "Phone or VK", "c.pref": "Countries by priority", "c.exp": "Model UN experience", "c.exp0": "First time", "c.exp1": "1–2 conferences", "c.exp2": "3 or more",
     "c.save": "Submit application", "c.saved": "Application saved", "c.update": "Update application",
-    "c.paper": "Position paper", "c.paperHint": ".docx or .pdf, up to 2 pages: your country's position, proposals and partners.",
+    "c.paper": "Position paper", "c.paperHint": "Up to 2 pages: your country's position, proposals and partners. Write it here or attach a .docx / .pdf and send it to the chair for review.",
     "c.upload": "Choose file", "c.uploaded": "Uploaded", "c.speech": "Opening speech", "c.speechHint": "Write your speech and check it fits in a minute.", "c.start": "Start", "c.stop": "Stop", "c.words": "words", "c.approx": "≈ read aloud",
     "c.schedNote": "The 2027 schedule will appear closer to the session. For now — how it went in 2026.", "c.day": "Day",
     "c.noMsg": "No messages yet.", "c.from": "Chair",
@@ -122,15 +122,16 @@
   };
   D.overview = () => {
     const a = myApp()?.at ? myApp() : null;
-    const step = !a ? 0 : !a.country ? 1 : !a.paper ? 2 : 3;
+    const ps = a?.paper?.status;
+    const step = !a ? 0 : !a.country ? 1 : ps !== "ok" ? 2 : 3;
     const steps = ["c.st1", "c.st2", "c.st3", "c.st4", "c.st5"];
     const c = a ? com(a.com) : null;
-    const msg = [t("c.ns.app"), t("c.ns.wait"), t("c.ns.paper"), t("c.ns.ready")][step];
+    const msg = step === 2 && ps ? t(ps === "fix" ? "c.ns.fix" : "c.ns.review") : [t("c.ns.app"), t("c.ns.wait"), t("c.ns.paper"), t("c.ns.ready")][step];
     return `<ol class="track">${steps.map((k, i) => `<li class="${i < step ? "done" : i === step ? "now" : ""}"><span>${i + 1}</span>${t(k)}</li>`).join("")}</ol>
       <div class="cab-grid">
         <div class="cab-card placard-mini"><img src="${c ? `img/com/${c.id}.webp` : "img/emblem.webp"}" alt=""><small>${t("c.yourCountry")}</small><b>${a?.country ? esc(L(c.countries)[a.country - 1].split(" — ")[0]) : t("c.notAssigned")}</b><span>${c ? esc(L(c.name)) : ""}</span></div>
         <div class="cab-card"><small class="muted">${t("c.nextStep")}</small><p class="big">${msg}</p>
-          <button class="btn btn-primary btn-s" data-go="${!a ? "app" : a.country && !a.paper ? "paper" : "inbox"}">${t(!a ? "c.tab.app" : a.country && !a.paper ? "c.tab.paper" : "c.tab.inbox")}</button></div>
+          <button class="btn btn-primary btn-s" data-go="${!a ? "app" : a.country && (!ps || ps === "fix") ? "paper" : "inbox"}">${t(!a ? "c.tab.app" : a.country && (!ps || ps === "fix") ? "c.tab.paper" : "c.tab.inbox")}</button></div>
       </div>`;
   };
   D.app = () => {
@@ -149,12 +150,17 @@
         <div class="span2"><button class="btn btn-primary" type="submit">${t(a.at ? "c.update" : "c.save")}</button> <span class="ok" id="okm" hidden>${t("c.saved")}</span></div>
       </form>`;
   };
+  const pStatus = (p) => { const k = p?.status || "none"; return `<p><span class="pill ${{ ok: "ok", fix: "bad", review: "warn", none: "" }[k]}">${t("c.ps." + k)}</span>${p ? ` <small class="muted">${t("c.pSent")} ${new Date(p.at).toLocaleString(LANG, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · ${t("c.pv2")} ${p.v || 1}</small>` : ""}</p>`; };
+  let pendingFile = null;
   D.paper = () => {
     const a = myApp() || {};
     return `<div class="cab-grid">
       <div class="cab-card"><h3>${t("c.paper")}</h3><p class="muted">${t("c.paperHint")}</p>
-        <label class="btn btn-ghost btn-s file"><input type="file" id="pf" accept=".doc,.docx,.pdf" hidden>${t("c.upload")}</label>
-        ${a.paper ? `<p class="ok">${t("c.uploaded")}: <b>${esc(a.paper.name)}</b> · ${new Date(a.paper.at).toLocaleDateString(LANG)}</p>` : ""}</div>
+        ${pStatus(a.paper)}
+        ${a.paper?.note ? `<div class="pnote"><small class="muted">${t("c.pChairNote")}</small><p>${esc(a.paper.note)}</p></div>` : ""}
+        <div class="field"><label for="ptx">${t("c.pText")}</label><textarea id="ptx" rows="9" placeholder="${t("c.pTextHint")}">${esc(a.paperDraft ?? a.paper?.text ?? "")}</textarea></div>
+        <div class="timer-row"><label class="btn btn-ghost btn-s file"><input type="file" id="pf" accept=".doc,.docx,.pdf" hidden>${t("c.upload")}</label><span class="muted" id="pfn">${esc(pendingFile?.name || a.paper?.name || "")}</span></div>
+        <div><button class="btn btn-primary btn-s" id="psend"${a.paper?.status === "ok" ? " disabled" : ""}>${t(a.paper ? "c.pResend" : "c.pSend")}</button></div></div>
       <div class="cab-card"><h3>${t("c.speech")}</h3><p class="muted">${t("c.speechHint")}</p>
         <div class="field"><textarea id="sp" rows="6">${esc(a.speech || "")}</textarea></div>
         <div class="timer-row"><span class="timer" id="tm">1:00</span><button class="btn btn-primary btn-s" id="tgo">${t("c.start")}</button><span class="muted" id="wc"></span></div></div>
@@ -178,6 +184,10 @@
     "c.startDeb": "Начать дебаты", "c.endDeb": "Завершить дебаты", "c.gen": "Общий список ораторов", "c.left": "осталось", "c.total": "всего", "c.perSp": "на оратора",
     "c.now": "Сейчас говорит", "c.pause": "Пауза", "c.done": "Речь окончена", "c.qs": "Вопросы к оратору", "c.qAdd": "Отметить вопрос", "c.noQ": "Вопросов пока нет",
     "c.queue": "Очередь", "c.toQueue": "В очередь", "c.spoke": "Выступили", "c.used": "Время", "c.qFrom": "Вопросы от", "c.noSpoke": "Пока никто не выступал.", "c.timeUp": "Время дебатов вышло",
+    "c.tab.papers": "Позиционки", "c.pText": "Текст письма", "c.pTextHint": "Можно написать прямо здесь или приложить файл — или и то и другое.", "c.pFile": "Файл", "c.pSend": "Отправить на проверку", "c.pResend": "Отправить новую версию",
+    "c.ps.none": "не отправлено", "c.ps.review": "на проверке", "c.ps.ok": "принято", "c.ps.fix": "на доработку", "c.pv2": "версия", "c.pSent": "Отправлено", "c.pChairNote": "Комментарий председателя",
+    "c.pAccept": "Принять", "c.pReturn": "На доработку", "c.pNote": "Комментарий делегату", "c.pOpen": "Открыть файл", "c.pRead": "Текст письма", "c.noPapers": "Пока никто не отправил позиционное письмо.", "c.pNoFile": "Файл в демо не сохраняется — только название.",
+    "c.ns.review": "Письмо на проверке у председателя. Ответ придёт в сообщения.", "c.ns.fix": "Председатель вернул письмо на доработку — посмотрите комментарий и отправьте новую версию.",
     "c.doc": "Документ", "c.record": "Записать в протокол", "c.protocol": "Протокол", "c.noAbst": "«Присутствует и голосует» — воздерживаться нельзя",
   });
   Object.assign(I18N.en, {
@@ -191,6 +201,10 @@
     "c.startDeb": "Start debate", "c.endDeb": "End debate", "c.gen": "General speakers' list", "c.left": "left", "c.total": "total", "c.perSp": "per speaker",
     "c.now": "Now speaking", "c.pause": "Pause", "c.done": "Speech over", "c.qs": "Questions to the speaker", "c.qAdd": "Mark a question", "c.noQ": "No questions yet",
     "c.queue": "Queue", "c.toQueue": "Add to queue", "c.spoke": "Spoke", "c.used": "Time", "c.qFrom": "Questions from", "c.noSpoke": "Nobody has spoken yet.", "c.timeUp": "Debate time is up",
+    "c.tab.papers": "Position papers", "c.pText": "Paper text", "c.pTextHint": "Write it right here or attach a file — or both.", "c.pFile": "File", "c.pSend": "Send for review", "c.pResend": "Send a new version",
+    "c.ps.none": "not sent", "c.ps.review": "under review", "c.ps.ok": "accepted", "c.ps.fix": "needs revision", "c.pv2": "version", "c.pSent": "Sent", "c.pChairNote": "Chair's comment",
+    "c.pAccept": "Accept", "c.pReturn": "Return for revision", "c.pNote": "Comment to the delegate", "c.pOpen": "Open file", "c.pRead": "Paper text", "c.noPapers": "Nobody has sent a position paper yet.", "c.pNoFile": "In the demo the file itself is not stored — only its name.",
+    "c.ns.review": "Your paper is with the chair. The answer will come to Messages.", "c.ns.fix": "The chair returned your paper for revision — read the comment and send a new version.",
     "c.doc": "Document", "c.record": "Record in the minutes", "c.protocol": "Minutes", "c.noAbst": "“Present and voting” — cannot abstain",
   });
   db.motions ??= {};   // {com: [{id, type, by, topic, total, per, votes: {country: 'f'|'a'}, res: 'pass'|'fail'|null, at}]}
@@ -215,7 +229,7 @@
     const seed = db.apps.some((a) => a.com === c.id && a.at) ? "" : `<div class="cab-card" style="margin-bottom:16px"><p class="muted">${t("c.seedHint")}</p><div><button class="btn btn-ghost btn-s" id="seed">${t("c.seed")}</button></div></div>`;
     return `${comPicker()}<p class="cab-demo">${t("c.demoCom")}</p>${seed}<div class="table-wrap"><table class="tbl"><thead><tr><th>${t("c.country")}</th><th>${t("c.holder")}</th><th>${t("c.applied")}</th></tr></thead><tbody>
       ${all(c).map((n) => { const a = h[n], ws = w[n] || []; return `<tr><td><b>${esc(L(c.countries)[n - 1])}</b></td>
-        <td>${a ? `${esc(a.fio)}<br><small class="muted">${esc(a.uni)}</small><br><span class="pill ${a.paper ? "ok" : "warn"}">${t(a.paper ? "c.paperOk" : "c.paperNo")}</span>` : `<span class="muted">${t("c.free")}</span>`}</td>
+        <td>${a ? `${esc(a.fio)}<br><small class="muted">${esc(a.uni)}</small><br>${pStatus(a.paper).replace(/ <small.*<\/small>/, "")}` : `<span class="muted">${t("c.free")}</span>`}</td>
         <td>${ws.length ? `<div class="wants">${ws.sort((x, y) => x.i - y.i).map(({ a: x, i }) => `<span class="want${x.country === n ? " on" : x.country ? " off" : ""}">${esc(x.fio)} <small>${i + 1}${t("c.choice")}</small></span>`).join("")}</div>` : `<span class="muted">${t("c.noOne")}</span>`}</td></tr>`; }).join("")}
       </tbody></table></div>
       <form class="cab-card" id="msgf" style="margin-top:18px"><h3>${t("c.msgSend")}</h3>
@@ -233,6 +247,16 @@
         <div class="assign">${a.country ? `<span class="pill ok">${t("c.assigned")}: ${esc(cn(c, a.country))}</span>` : ""}
           <select data-app="${esc(a.email)}" aria-label="${t("c.assignTo")}">${L(c.countries).map((x, i) => `<option value="${i + 1}"${(a.country || a.prefs.find((p) => !h[p]) || 0) === i + 1 ? " selected" : ""}${h[i + 1] && h[i + 1].email !== a.email ? " disabled" : ""}>${esc(x)}</option>`).join("")}</select>
           <button class="btn btn-primary btn-s" data-assign="${esc(a.email)}">${t("c.assign")}</button></div></div>`).join("")}</div>`;
+  };
+  C.papers = () => {
+    const c = chairCom(), list = db.apps.filter((a) => a.com === c.id && a.paper).sort((x, y) => ({ review: 0, fix: 1, ok: 2 }[x.paper.status] ?? 0) - ({ review: 0, fix: 1, ok: 2 }[y.paper.status] ?? 0));
+    if (!list.length) return `${comPicker()}<div class="cab-card"><p class="muted">${t("c.noPapers")}</p></div>`;
+    return `${comPicker()}<div class="apps">${list.map((a) => { const p = a.paper; return `<div class="cab-card">
+        <div class="mo-head"><div><small class="muted">${a.country ? esc(cn(c, a.country)) : "—"}</small><h3>${esc(a.fio)}</h3></div></div>${pStatus(p)}
+        ${p.text ? `<details${p.status === "review" ? " open" : ""}><summary><b>${t("c.pRead")}</b></summary><div class="ptext">${esc(p.text)}</div></details>` : ""}
+        ${p.name ? `<p>📎 ${p.data ? `<a href="${p.data}" download="${esc(p.name)}">${esc(p.name)}</a>` : `${esc(p.name)} <small class="muted">· ${t("c.pNoFile")}</small>`}</p>` : ""}
+        <div class="field"><label for="pn-${esc(a.email)}">${t("c.pNote")}</label><textarea id="pn-${esc(a.email)}" rows="3">${esc(p.note || "")}</textarea></div>
+        <div class="timer-row"><button class="btn btn-primary btn-s" data-prev="${esc(a.email)}" data-v="ok">${t("c.pAccept")}</button><button class="btn btn-ghost btn-s" data-prev="${esc(a.email)}" data-v="fix">${t("c.pReturn")}</button></div></div>`; }).join("")}</div>`;
   };
   const counts = (c) => {
     const r = db.roll[c.id] || {}, N = c.countries.ru.length;
@@ -339,7 +363,7 @@
     clearInterval(timer); clearInterval(ctick);
     const s = db.session;
     if (!s) return loginView();
-    const tabs = s.role === "chair" ? ["roster", "apps", "roll", "motions", "speakers", "vote", "awards"] : ["home", "overview", "app", "paper", "schedule", "inbox"];
+    const tabs = s.role === "chair" ? ["roster", "apps", "papers", "roll", "motions", "speakers", "vote", "awards"] : ["home", "overview", "app", "paper", "schedule", "inbox"];
     if (!tabs.includes(s.tab)) s.tab = tabs[0];
     shell(tabs, (s.role === "chair" ? C : D)[s.tab]());
     bind();
@@ -374,7 +398,25 @@
     }
     // письмо и речь
     const pf = $("#pf");
-    if (pf) pf.onchange = () => { const f = pf.files[0]; if (!f) return; let a = myApp(); if (!a?.at) { db.session.tab = "app"; save(); return render(); } a.paper = { name: f.name, size: f.size, at: Date.now() }; save(); render(); };
+    if (pf) {
+      if (!myApp()?.at) { pf.closest("label").onclick = (e) => { e.preventDefault(); db.session.tab = "app"; save(); render(); }; }
+      pf.onchange = () => {
+        const f = pf.files[0]; if (!f) return;
+        pendingFile = { name: f.name, size: f.size }; $("#pfn").textContent = f.name;
+        // в демо файл до 1,5 МБ кладём в браузер, чтобы председатель мог его открыть; на сервере будет обычная загрузка
+        if (f.size < 1.5e6) { const r = new FileReader(); r.onload = () => (pendingFile.data = r.result); r.readAsDataURL(f); }
+      };
+      $("#ptx").oninput = () => { const a = myApp(); if (a) { a.paperDraft = $("#ptx").value; save(); } };
+      $("#psend").onclick = () => {
+        const a = myApp(); if (!a?.at) { db.session.tab = "app"; save(); return render(); }
+        const text = $("#ptx").value.trim(), file = pendingFile || (a.paper && a.paper.name ? { name: a.paper.name, size: a.paper.size, data: a.paper.data } : null);
+        if (!text && !file) return $("#ptx").focus();
+        a.paper = { text, ...(file || {}), at: Date.now(), status: "review", v: (a.paper?.v || 0) + 1 };
+        delete a.paperDraft; pendingFile = null;
+        try { save(); } catch (e) {} if (!localStorage.getItem(KEY)?.includes(a.paper.at)) { delete a.paper.data; save(); }
+        render();
+      };
+    }
     const sp = $("#sp");
     if (sp) {
       const wc = () => { const n = (sp.value.match(/\S+/g) || []).length; $("#wc").textContent = `${n} ${t("c.words")} · ${fmt(Math.round(n / 2.2))} ${t("c.approx")}`; };
@@ -405,10 +447,17 @@
       const c = chairCom(), N = c.countries.ru.length, ru = LANG !== "en";
       for (let i = 1; i <= Math.min(8, N); i++) {
         const p1 = ((i * 3) % N) + 1, prefs = [p1, (p1 % N) + 1, ((p1 + 1) % N) + 1];
-        db.apps.push({ email: `demo${i}.${c.id}@example.org`, fio: (ru ? "Демо-делегат " : "Demo delegate ") + i, uni: ru ? "ННГУ" : "UNN", year: 1 + (i % 4), contact: "—", com: c.id, prefs, exp: i % 3, at: Date.now() - i * 6e5, ...(i <= 4 ? { country: p1, paper: i % 2 ? { name: "position.pdf" } : undefined } : {}) });
+        db.apps.push({ email: `demo${i}.${c.id}@example.org`, fio: (ru ? "Демо-делегат " : "Demo delegate ") + i, uni: ru ? "ННГУ" : "UNN", year: 1 + (i % 4), contact: "—", com: c.id, prefs, exp: i % 3, at: Date.now() - i * 6e5, ...(i <= 4 ? { country: p1, paper: i % 2 ? { name: "position.pdf", text: ru ? "Делегация придерживается позиции…" : "The delegation's position is…", at: Date.now() - i * 3e5, status: "review", v: 1 } : undefined } : {}) });
       }
       save(); render();
     });
+    // проверка позиционных писем
+    $$("[data-prev]").forEach((b) => (b.onclick = () => {
+      const a = db.apps.find((x) => x.email === b.dataset.prev), note = document.getElementById("pn-" + a.email).value.trim(), ok = b.dataset.v === "ok";
+      Object.assign(a.paper, { status: b.dataset.v, note, checked: Date.now() });
+      db.msgs.push({ to: a.email, at: Date.now(), text: (LANG === "en" ? (ok ? "Your position paper is accepted." : "Your position paper needs revision.") : ok ? "Позиционное письмо принято." : "Позиционное письмо нужно доработать.") + (note ? " " + note : "") });
+      save(); render();
+    }));
     // моушены
     const mof = $("#mof");
     if (mof) {
