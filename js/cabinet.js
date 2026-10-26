@@ -180,7 +180,7 @@
     "c.newMotion": "Новый моушен", "c.mType": "Вид", "c.mBy": "Кто предлагает", "c.mTopic": "Тема", "c.mTotal": "Общее время, мин", "c.mPer": "На оратора, с", "c.mAdd": "Внести",
     "c.mt.mod": "Контролируемые дебаты", "c.mt.unmod": "Неконтролируемые дебаты", "c.mt.agenda": "Установление повестки дня", "c.mt.suspend": "Приостановить заседание", "c.mt.resume": "Возобновить заседание", "c.mt.close": "Прекращение прений", "c.mt.other": "Другое",
     "c.min": "мин", "c.s": "с", "c.secPer": "с на оратора", "c.notVoted": "Не голосовали", "c.needFor": "Нужно «за»", "c.byCountry": "Голоса по странам", "c.restFor": "Остальные — за", "c.restAg": "Остальные — против",
-    "c.mWait": "ждёт голосования", "c.mPass": "Прошёл", "c.mFail": "Не прошёл", "c.markPass": "Прошёл", "c.markFail": "Не прошёл", "c.change": "Изменить", "c.del": "Удалить", "c.sugPass": "по голосам проходит", "c.sugFail": "по голосам не проходит", "c.noMotions": "Моушенов пока не было. Внесите первый — он появится здесь с голосованием.", "c.procNote": "Процедурные голосования: только «за» или «против», воздерживаться нельзя.",
+    "c.mWait": "ждёт голосования", "c.mRevote": "переголосование", "c.mFix": "Закрепить итоги голосования", "c.revoteNote": "Голоса разделились поровну — моушен вернулся на повторное голосование.", "c.vd.pass": "проходит", "c.vd.fail": "не проходит", "c.vd.tie": "поровну", "c.needMore": "«за» должно быть больше, чем «против»", "c.need23": "нужно 2/3 «за»", "c.mPass": "Прошёл", "c.mFail": "Не прошёл", "c.markPass": "Прошёл", "c.markFail": "Не прошёл", "c.change": "Изменить", "c.del": "Удалить", "c.sugPass": "по голосам проходит", "c.sugFail": "по голосам не проходит", "c.noMotions": "Моушенов пока не было. Внесите первый — он появится здесь с голосованием.", "c.procNote": "Процедурные голосования: только «за» или «против», воздерживаться нельзя.",
     "c.startDeb": "Начать дебаты", "c.endDeb": "Завершить дебаты", "c.gen": "Общий список ораторов", "c.left": "осталось", "c.total": "всего", "c.perSp": "на оратора",
     "c.now": "Сейчас говорит", "c.pause": "Пауза", "c.done": "Речь окончена", "c.qs": "Вопросы к оратору", "c.qAdd": "Отметить вопрос", "c.noQ": "Вопросов пока нет",
     "c.queue": "Очередь", "c.toQueue": "В очередь", "c.spoke": "Выступили", "c.used": "Время", "c.qFrom": "Вопросы от", "c.noSpoke": "Пока никто не выступал.", "c.timeUp": "Время дебатов вышло",
@@ -200,7 +200,7 @@
     "c.newMotion": "New motion", "c.mType": "Type", "c.mBy": "Proposed by", "c.mTopic": "Topic", "c.mTotal": "Total time, min", "c.mPer": "Per speaker, s", "c.mAdd": "Add",
     "c.mt.mod": "Moderated caucus", "c.mt.unmod": "Unmoderated caucus", "c.mt.agenda": "Setting the agenda", "c.mt.suspend": "Suspend the meeting", "c.mt.resume": "Resume the meeting", "c.mt.close": "Closure of debate", "c.mt.other": "Other",
     "c.min": "min", "c.s": "s", "c.secPer": "s per speaker", "c.notVoted": "Not voted", "c.needFor": "Votes for needed", "c.byCountry": "Votes by country", "c.restFor": "Rest — for", "c.restAg": "Rest — against",
-    "c.mWait": "awaiting vote", "c.mPass": "Passed", "c.mFail": "Failed", "c.markPass": "Passed", "c.markFail": "Failed", "c.change": "Change", "c.del": "Delete", "c.sugPass": "passes by the votes", "c.sugFail": "fails by the votes", "c.noMotions": "No motions yet. Add the first one — it will appear here with its vote.", "c.procNote": "Procedural votes: for or against only, no abstentions.",
+    "c.mWait": "awaiting vote", "c.mRevote": "revote", "c.mFix": "Lock in the vote", "c.revoteNote": "The vote was tied — the motion goes back for a revote.", "c.vd.pass": "passes", "c.vd.fail": "fails", "c.vd.tie": "tied", "c.needMore": "more for than against", "c.need23": "2/3 for needed", "c.mPass": "Passed", "c.mFail": "Failed", "c.markPass": "Passed", "c.markFail": "Failed", "c.change": "Change", "c.del": "Delete", "c.sugPass": "passes by the votes", "c.sugFail": "fails by the votes", "c.noMotions": "No motions yet. Add the first one — it will appear here with its vote.", "c.procNote": "Procedural votes: for or against only, no abstentions.",
     "c.startDeb": "Start debate", "c.endDeb": "End debate", "c.gen": "General speakers' list", "c.left": "left", "c.total": "total", "c.perSp": "per speaker",
     "c.now": "Now speaking", "c.pause": "Pause", "c.done": "Speech over", "c.qs": "Questions to the speaker", "c.qAdd": "Mark a question", "c.noQ": "No questions yet",
     "c.queue": "Queue", "c.toQueue": "Add to queue", "c.spoke": "Spoke", "c.used": "Time", "c.qFrom": "Questions from", "c.noSpoke": "Nobody has spoken yet.", "c.timeUp": "Debate time is up",
@@ -280,7 +280,8 @@
 
   // моушены: процедурные — простое большинство присутствующих, прекращение прений — две трети
   const MT = { mod: ["s", "topic", "total", "per"], unmod: ["s", "total"], agenda: ["s", "topic"], suspend: ["s"], resume: ["s"], close: ["t"], other: ["s", "topic"] };
-  const need = (c, m) => { const n = voters(c).length; return MT[m.type][0] === "t" ? Math.ceil((n * 2) / 3) : Math.floor(n / 2) + 1; };
+  // итог: «за» больше, чем «против» — прошёл; поровну — переголосование; прекращение прений — две трети поданных голосов
+  const verdict = (m) => { const f = tally(m.votes, "f"), a = tally(m.votes, "a"); if (!f && !a) return ""; if (f === a) return "tie"; return (MT[m.type][0] === "t" ? f >= Math.ceil(((f + a) * 2) / 3) : f > a) ? "pass" : "fail"; };
   const mMeta = (m) => [m.topic && `«${esc(m.topic)}»`, m.total && `${m.total} ${t("c.min")}`, m.per && `${m.per} ${t("c.secPer")}`].filter(Boolean).join(" · ");
   const openMo = new Set(); // какие моушены раскрыты — помним между перерисовками
   C.motions = () => {
@@ -293,19 +294,20 @@
         <div class="field" data-f="per"><label for="mo-per">${t("c.mPer")}</label><input id="mo-per" type="number" min="15" max="300" step="15" value="60"></div>
       </div><div><button class="btn btn-primary btn-s">${t("c.mAdd")}</button></div></form>`;
     const card = (m, i) => {
-      const f = tally(m.votes, "f"), a = tally(m.votes, "a"), nd = need(c, m), sug = f >= nd;
+      const f = tally(m.votes, "f"), a = tally(m.votes, "a"), vd = verdict(m);
       const deb = (m.type === "mod" || m.type === "unmod") && m.res === "pass";
-      const st = m.res ? `<span class="pill ${m.res === "pass" ? "ok" : "bad"}">${t(m.res === "pass" ? "c.mPass" : "c.mFail")}</span>` : `<span class="pill warn">${t("c.mWait")}</span>`;
+      const st = m.res ? `<span class="pill ${m.res === "pass" ? "ok" : "bad"}">${t(m.res === "pass" ? "c.mPass" : "c.mFail")}</span>` : `<span class="pill warn">${t(m.revote ? "c.mRevote" : "c.mWait")}</span>`;
       return `<details class="cab-card mo${m.res ? " mo-" + m.res : ""}" data-mo="${m.id}"${openMo.has(m.id) ? " open" : ""}>
         <summary class="mo-sum"><span class="mo-n">${i + 1}</span><span class="mo-t"><b>${t("c.mt." + m.type)}</b> <span class="muted">· ${esc(cn(c, m.by))}</span>${mMeta(m) ? `<small>${mMeta(m)}</small>` : ""}</span>
           <span class="mo-r">${f + a ? `<small class="mo-tl"><b class="okc">${f}</b> / <b class="badc">${a}</b></small>` : ""}${st}<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
         <div class="mo-body"><small class="muted">${hm(m.at)}</small>
-        <div class="kpis"><div><b>${f}</b><span>${t("c.for")}</span></div><div><b>${a}</b><span>${t("c.against")}</span></div><div><b>${Math.max(0, vs.length - f - a)}</b><span>${t("c.notVoted")}</span></div><div><b class="${sug ? "okc" : "badc"}">${nd}</b><span>${t("c.needFor")}</span></div></div>
+        <div class="kpis"><div><b>${f}</b><span>${t("c.for")}</span></div><div><b>${a}</b><span>${t("c.against")}</span></div><div><b>${Math.max(0, vs.length - f - a)}</b><span>${t("c.notVoted")}</span></div><div><b class="${vd === "pass" ? "okc" : vd === "fail" ? "badc" : ""}">${vd ? t("c.vd." + vd) : "—"}</b><span>${t(MT[m.type][0] === "t" ? "c.need23" : "c.needMore")}</span></div></div>
+        ${m.revote && !m.res ? `<p class="cab-demo warnc">${t("c.revoteNote")}${m.revote > 1 ? ` (${m.revote})` : ""}</p>` : ""}
         ${m.res ? "" : `<div class="roll flat">${vs.map((n) => `<div class="roll-row"><b>${esc(cn(c, n))}</b><div class="seg3">${[["f", "c.for"], ["a", "c.against"]].map(([k, l]) => `<button data-mv="${m.id}:${n}" data-v="${k}" aria-pressed="${m.votes[n] === k}">${t(l)}</button>`).join("")}</div></div>`).join("")}</div>
           <div class="timer-row"><button class="btn btn-ghost btn-s" data-mrest="${m.id}" data-v="f">${t("c.restFor")}</button><button class="btn btn-ghost btn-s" data-mrest="${m.id}" data-v="a">${t("c.restAg")}</button></div>`}
         <div class="timer-row">${m.res
           ? `${deb ? `<button class="btn btn-primary btn-s" data-mstart="${m.id}">${t("c.startDeb")}</button>` : ""}<button class="btn btn-ghost btn-s" data-mres="${m.id}" data-v="">${t("c.change")}</button>`
-          : `<button class="btn btn-primary btn-s" data-mres="${m.id}" data-v="pass">${t("c.markPass")}</button><button class="btn btn-ghost btn-s" data-mres="${m.id}" data-v="fail">${t("c.markFail")}</button><small class="muted">${t(sug ? "c.sugPass" : "c.sugFail")}</small>`}
+          : `<button class="btn btn-primary btn-s" data-mfix="${m.id}"${vd ? "" : " disabled"}>${t("c.mFix")}</button>`}
           <button class="linkbtn" data-mdel="${m.id}">${t("c.del")}</button></div></div></details>`;
     };
     return `${comPicker()}${Object.keys(r).length ? (counts(c).ok ? "" : `<p class="cab-demo warnc">${t("c.noQuorum")}</p>`) : `<p class="cab-demo">${t("c.rollFirst")}</p>`}
@@ -503,6 +505,12 @@
     $$("[data-mv]").forEach((b) => (b.onclick = () => { const [id, n] = b.dataset.mv.split(":"), m = mot(id); m.votes[n] = m.votes[n] === b.dataset.v ? undefined : b.dataset.v; if (!m.votes[n]) delete m.votes[n]; save(); render(); }));
     $$("[data-mrest]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mrest); voters(chairCom()).forEach((n) => (m.votes[n] ??= b.dataset.v)); save(); render(); }));
     $$("details[data-mo]").forEach((d) => d.addEventListener("toggle", () => (d.open ? openMo.add(d.dataset.mo) : openMo.delete(d.dataset.mo))));
+    $$("[data-mfix]").forEach((b) => (b.onclick = () => {
+      const m = mot(b.dataset.mfix), vd = verdict(m);
+      if (vd === "tie") { m.votes = {}; m.revote = (m.revote || 0) + 1; openMo.add(m.id); }
+      else { m.res = vd; m.fin = { f: tally(m.votes, "f"), a: tally(m.votes, "a") }; vd === "pass" && (m.type === "mod" || m.type === "unmod") ? openMo.add(m.id) : openMo.delete(m.id); }
+      save(); render();
+    }));
     $$("[data-mres]").forEach((b) => (b.onclick = () => { const m = mot(b.dataset.mres); m.res = b.dataset.v || null; m.res && !(m.res === "pass" && (m.type === "mod" || m.type === "unmod")) ? openMo.delete(m.id) : openMo.add(m.id); save(); render(); }));
     $$("[data-mdel]").forEach((b) => (b.onclick = () => { const c = chairCom(); db.motions[c.id] = db.motions[c.id].filter((m) => m.id !== b.dataset.mdel); if (deb(c).mid === b.dataset.mdel) deb(c).mid = null; save(); render(); }));
     $$("[data-mstart]").forEach((b) => (b.onclick = () => { const d = deb(chairCom()), m = mot(b.dataset.mstart); d.mid = m.id; d.q = []; d.queue = m.type === "mod" ? [m.by] : []; db.session.tab = "speakers"; save(); render(); }));
