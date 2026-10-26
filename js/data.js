@@ -22,7 +22,7 @@ window.MUN = {
       chairs: [{ role: "chair", name: { ru: "Дарья Меркулова", en: "Daria Merkulova" } }],
       countries: { ru: ["КНР", "Россия", "Великобритания", "США", "Франция", "Бахрейн", "Греция", "Дания", "ДР Конго", "Латвия", "Колумбия", "Либерия", "Сомали", "Пакистан", "Панама"], en: ["China", "Russia", "United Kingdom", "United States", "France", "Bahrain", "Greece", "Denmark", "DR Congo", "Latvia", "Colombia", "Liberia", "Somalia", "Pakistan", "Panama"] },
       story: { ru: "Две коалиции спорили, передавать ли президента Венесуэлы под юрисдикцию МУС, и всё решалось вопросом вето.", en: "Two coalitions argued over handing Venezuela's president to the ICC, and it all came down to the veto." },
-      photo: "img/p19.jpg",
+      photo: "img/p19.webp",
     },
     {
       id: "sco", short: { ru: "ШОС", en: "SCO" },
@@ -35,7 +35,7 @@ window.MUN = {
       ],
       countries: { ru: ["Индия", "Иран", "Казахстан", "КНР", "Кыргызстан", "Пакистан", "Россия", "Таджикистан", "Узбекистан", "Беларусь"], en: ["India", "Iran", "Kazakhstan", "China", "Kyrgyzstan", "Pakistan", "Russia", "Tajikistan", "Uzbekistan", "Belarus"] },
       story: { ru: "Индия и Пакистан спорили до последнего часа, Кыргызстан и Узбекистан мирили их, а делегаты предлагали реформу РАТС.", en: "India and Pakistan argued to the last hour, Kyrgyzstan and Uzbekistan mediated, and delegates pushed a RATS reform." },
-      photo: "img/p22.jpg",
+      photo: "img/p22.webp",
     },
     {
       id: "hc", short: { ru: "Кризис", en: "Crisis" },
@@ -45,7 +45,7 @@ window.MUN = {
       chairs: [{ role: "chair", name: { ru: "Михаил Белореков", en: "Mikhail Belorekov" } }],
       countries: { ru: ["СССР — Н. С. Хрущёв", "США — Дж. Кеннеди", "Куба — Ф. Кастро", "КНР — Мао Цзэдун", "Франция — Ш. де Голль", "Италия — А. Сеньи", "Индия — Д. Неру", "Великобритания — Г. Макмиллан", "Бразилия — Ж. Гуларт", "Югославия — И. Тито", "Мексика — А. Лопес Матеос", "Колумбия — А. Льерас", "Венесуэла — Р. Бетанкур", "Канада — Дж. Дифенбейкер"], en: ["USSR — N. Khrushchev", "USA — J. Kennedy", "Cuba — F. Castro", "PRC — Mao Zedong", "France — Ch. de Gaulle", "Italy — A. Segni", "India — J. Nehru", "UK — H. Macmillan", "Brazil — J. Goulart", "Yugoslavia — J. Tito", "Mexico — A. López Mateos", "Colombia — A. Lleras", "Venezuela — R. Betancourt", "Canada — J. Diefenbaker"] },
       story: { ru: "Каждый делегат — лидер 1962 года. Переговоры сорвались, и мир оказался на пороге третьей мировой.", en: "Every delegate is a 1962 leader. Talks collapsed and the world stood on the brink of a third world war." },
-      photo: "img/p21.jpg",
+      photo: "img/p21.webp",
     },
     {
       id: "ec", short: { ru: "ЕС", en: "EUCO" },
@@ -58,7 +58,7 @@ window.MUN = {
       ],
       countries: { ru: ["Австрия", "Бельгия", "Болгария", "Хорватия", "Кипр", "Чехия", "Дания", "Эстония", "Финляндия", "Франция", "Германия", "Греция", "Венгрия", "Ирландия", "Италия", "Латвия", "Литва", "Люксембург", "Мальта", "Нидерланды", "Польша", "Португалия", "Румыния", "Словакия", "Словения", "Испания", "Швеция"], en: ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "The Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"] },
       story: { ru: "Делегаты искали общий ответ на торговую сделку с США, а председатель вела канал с итогами в стиле твитов Трампа.", en: "Delegates looked for a common answer to the US trade deal, while the chair ran a recap channel in the style of Trump's tweets." },
-      photo: "img/p07.jpg",
+      photo: "img/p07.webp",
     },
     {
       id: "las", short: { ru: "ЛАГ", en: "LAS" },
@@ -68,7 +68,7 @@ window.MUN = {
       chairs: [{ role: "chair", name: { ru: "Алексей Данилин", en: "Alexey Danilin" } }],
       countries: { ru: ["Алжир", "Бахрейн", "Коморы", "Джибути", "Египет", "Ирак", "Иордания", "Кувейт", "Ливан", "Ливия", "Мавритания", "Марокко", "Оман", "Палестина", "Катар", "Саудовская Аравия", "Сомали", "Судан", "Сирия", "Тунис", "ОАЭ", "Йемен"], en: ["Algeria", "Bahrain", "Comoros", "Djibouti", "Egypt", "Iraq", "Jordan", "Kuwait", "Lebanon", "Libya", "Mauritania", "Morocco", "Oman", "Palestine", "Qatar", "Saudi Arabia", "Somalia", "Sudan", "Syria", "Tunisia", "United Arab Emirates", "Yemen"] },
       story: { ru: "ОАЭ представили альтернативный маршрут через арабские страны, Сирии дали особые условия, обсуждали патруль в Баб-эль-Мандебском проливе.", en: "The UAE proposed an alternative route through Arab states, Syria got special terms, and a Bab-el-Mandeb patrol was discussed." },
-      photo: "img/p33.jpg",
+      photo: "img/p33.webp",
     },
   ],
 
@@ -81,7 +81,7 @@ window.MUN = {
   // Приветствия на открытии. Фото и цитаты присылают организаторы: пока поля пустые, на сайте видна рамка.
   greetings: [
     {
-      id: "rykhtik", lead: true, photo: "img/rykhtik.jpg",
+      id: "rykhtik", lead: true, photo: "img/rykhtik.webp",
       name: { ru: "Михаил Иванович Рыхтик", en: "Mikhail Rykhtik" },
       title: { ru: "Доктор политических наук, профессор РАН, директор Института международных отношений и мировой истории ННГУ", en: "Doctor of Political Science, Professor of the Russian Academy of Sciences, Director of the Institute of International Relations and World History, UNN" },
       quote: {
@@ -90,7 +90,7 @@ window.MUN = {
       },
     },
     {
-      id: "malov", photo: "img/malov.jpg",
+      id: "malov", photo: "img/malov.webp",
       name: { ru: "Сергей Геральдович Малов", en: "Sergey Malov" },
       title: { ru: "Представитель Министерства иностранных дел Российской Федерации в Нижнем Новгороде", en: "Representative of the Ministry of Foreign Affairs of the Russian Federation in Nizhny Novgorod" },
       quote: {
@@ -99,7 +99,7 @@ window.MUN = {
       },
     },
     {
-      id: "guseva", photo: "img/guseva.jpg",
+      id: "guseva", photo: "img/guseva.webp",
       name: { ru: "Ольга Юрьевна Гусева", en: "Olga Guseva" },
       title: { ru: "Министр международных и межрегиональных связей Нижегородской области", en: "Minister of International and Interregional Relations of the Nizhny Novgorod Region" },
       quote: {
@@ -108,7 +108,7 @@ window.MUN = {
       },
     },
     {
-      id: "bedny", photo: "img/bedny.jpg",
+      id: "bedny", photo: "img/bedny.webp",
       name: { ru: "Александр Борисович Бедный", en: "Alexander Bedny" },
       title: { ru: "Проректор ННГУ по стратегическому развитию и международной деятельности", en: "Vice-Rector for Strategic Development and International Affairs, UNN" },
       quote: {
@@ -128,8 +128,8 @@ window.MUN = {
       album: "https://vk.com/albums-225230050",
       facts: { delegates: 64, committees: 5, days: 3 },
       results: true,
-      schedule: ["img/sched-24.jpg", "img/sched-25.jpg", "img/sched-26.jpg"],
-      photos: ["img/p41.jpg", "img/p23.jpg", "img/p39.jpg", "img/p26.jpg", "img/p17.jpg", "img/p06.jpg", "img/p35.jpg", "img/p33.jpg"],
+      schedule: ["img/sched-24.webp", "img/sched-25.webp", "img/sched-26.webp"],
+      photos: ["img/p41.webp", "img/p23.webp", "img/p39.webp", "img/p26.webp", "img/p17.webp", "img/p06.webp", "img/p35.webp", "img/p33.webp"],
     },
     {
       id: "2024a", n: "II", year: 2024,
@@ -156,5 +156,5 @@ window.MUN = {
   },
 
   // Фото без привязки к году (обложки альбомов группы).
-  gallery: ["img/p38.jpg", "img/p07.jpg", "img/p25.jpg", "img/p24.jpg", "img/p20.jpg", "img/p31.jpg", "img/p14.jpg", "img/p02.jpg"],
+  gallery: ["img/p38.webp", "img/p07.webp", "img/p25.webp", "img/p24.webp", "img/p20.webp", "img/p31.webp", "img/p14.webp", "img/p02.webp"],
 };

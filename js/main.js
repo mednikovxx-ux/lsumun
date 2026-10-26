@@ -14,7 +14,7 @@
   const head = document.createElement("header");
   head.className = "site-head";
   head.innerHTML = `<div class="wrap head-in">
-    <a class="brand" href="index.html"><img src="img/emblem.png" alt=""><span><b data-i18n="brand.name"></b><small data-i18n="brand.sub"></small></span></a>
+    <a class="brand" href="index.html"><img src="img/emblem.webp" alt=""><span><b data-i18n="brand.name"></b><small data-i18n="brand.sub"></small></span></a>
     <nav class="nav" id="nav">${links.map(([h, k, p]) => `<a href="${h}" data-i18n="${k}"${p === page ? ' aria-current="page"' : ""}></a>`).join("")}</nav>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-l="ru">RU</button><button type="button" data-l="en">EN</button></div>
     <a class="btn btn-primary btn-s head-cab" href="cabinet.html">${user}<span data-i18n="nav.cabinet"></span></a>
@@ -31,7 +31,7 @@
   const foot = document.createElement("footer");
   foot.className = "site-foot";
   foot.innerHTML = `<div class="wrap"><div class="foot-grid">
-      <div class="foot-brand"><img src="img/emblem-white.png" alt=""><div><b data-i18n="brand.name"></b><span data-i18n="foot.text"></span></div></div>
+      <div class="foot-brand"><img src="img/emblem-white.webp" alt=""><div><b data-i18n="brand.name"></b><span data-i18n="foot.text"></span></div></div>
       <a class="foot-org" href="https://www.unn.ru/" target="_blank" rel="noopener"><small data-i18n="org.label"></small><img src="img/unn-white.svg" alt="ННГУ им. Н. И. Лобачевского"></a>
       <nav class="foot-nav">${links.map(([h, k]) => `<a href="${h}" data-i18n="${k}"></a>`).join("")}<a href="${MUN.vk}" target="_blank" rel="noopener" data-i18n="foot.vk"></a></nav>
     </div>
@@ -91,7 +91,7 @@
     el.innerHTML = MUN.committees.map((c) => `
       <a class="com-card rv" href="committees.html#${c.id}">
         <div class="ph"><img src="${c.photo}" alt="" loading="lazy"></div>
-        <div class="body"><img class="com-emb" src="img/com/${c.id}.png" alt=""><h3>${esc(L(c.name))}</h3><p class="agenda">${esc(L(c.agenda))}</p>
+        <div class="body"><img class="com-emb" loading="lazy" decoding="async" src="img/com/${c.id}.webp" alt=""><h3>${esc(L(c.name))}</h3><p class="agenda">${esc(L(c.agenda))}</p>
         <div class="meta">${langTag(c)}<span class="tag">${c.countries.ru.length} ${t("com.seats")}</span></div></div>
       </a>`).join("");
   };
@@ -106,7 +106,7 @@
         </div>
         <div>
           <span class="kicker">${t("com.kicker")}</span>
-          <div class="com-title"><img src="img/com/${c.id}.png" alt=""><h2>${esc(L(c.name))}</h2></div>
+          <div class="com-title"><img src="img/com/${c.id}.webp" alt=""><h2>${esc(L(c.name))}</h2></div>
           <dl class="dl">
             <div><dt>${t("com.agenda")}</dt><dd>${esc(L(c.agenda))}</dd></div>
             <div><dt>${t("com.lang")}</dt><dd>${t("com.lang." + c.lang)}</dd></div>
@@ -123,7 +123,7 @@
   R.greet = (el) => {
     el.innerHTML = MUN.greetings.map((g) => {
       const q = L(g.quote);
-      const ph = g.photo ? `<div class="gph has"><img src="${g.photo}" alt="${esc(L(g.name))}" decoding="async" width="600" height="700"></div>` : `<div class="gph" aria-hidden="true">${initials(L(g.name))}</div>`;
+      const ph = g.photo ? `<div class="gph has"><img src="${g.photo}" alt="${esc(L(g.name))}" loading="lazy" decoding="async" width="600" height="700"></div>` : `<div class="gph" aria-hidden="true">${initials(L(g.name))}</div>`;
       const quote = `<blockquote class="${q ? "" : "soon"}">${q ? esc(q) : t("greet.quoteSoon")}</blockquote>`;
       const who = `<div><div class="gname">${esc(L(g.name))}</div><div class="gtitle">${esc(L(g.title))}</div></div>`;
       if (g.lead) return `<article class="greet rv lead-g${g.photo ? " with-photo" : ""}">${ph}<div class="gbody">${quote}${who}</div></article>`;
@@ -183,11 +183,11 @@
         front.classList.remove("fallback");
         pimg.alt = country;
         pimg.onerror = () => front.classList.add("fallback");
-        pimg.src = `img/plac/${c.id}-${String(i + 1).padStart(2, "0")}.jpg`;
-        bimg.src = `img/plac/back-${c.id}.jpg`;
+        pimg.src = `img/plac/${c.id}-${String(i + 1).padStart(2, "0")}.webp`;
+        bimg.src = `img/plac/back-${c.id}.webp`;
         $(".pc", root).textContent = country;
         $(".pk", root).textContent = L(c.name);
-        $(".pfb img", root).src = `img/com/${c.id}.png`;
+        $(".pfb img", root).src = `img/com/${c.id}.webp`;
       };
       if (!turn || matchMedia("(prefers-reduced-motion: reduce)").matches) return put();
       spin += 360; pose(); setTimeout(put, 280);

@@ -8,8 +8,8 @@
 <link rel="icon" href="img/emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero.jpg">
-<link rel="stylesheet" href="css/style.css?v=1793010898">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="stylesheet" href="css/style.css?v=1793015018">
 </head>
 <body data-page="home">
 <main>
@@ -36,7 +36,7 @@
         </div>
       </div>
       <figure class="hf-photo">
-        <img src="img/hero.jpg" alt="" data-i18n-alt="hero.caption" fetchpriority="high">
+        <img src="img/hero.webp" alt="" data-i18n-alt="hero.caption" fetchpriority="high">
         <figcaption><span data-i18n="hero.caption"></span></figcaption>
         <a class="hf-next" href="spring2027.html"><small data-i18n="hero.next"></small><b id="next-when"></b><span aria-hidden="true">→</span></a>
       </figure>
@@ -72,9 +72,9 @@
         <div class="about-text"><p data-i18n="about.p1"></p><p data-i18n="about.p2"></p></div>
       </div>
       <div class="about-photos rv">
-        <img src="img/p19.jpg" alt="" loading="lazy" data-zoom>
-        <img src="img/p21.jpg" alt="" loading="lazy" data-zoom>
-        <img src="img/p26.jpg" alt="" loading="lazy" data-zoom>
+        <img src="img/p19.webp" alt="" loading="lazy" data-zoom>
+        <img src="img/p21.webp" alt="" loading="lazy" data-zoom>
+        <img src="img/p26.webp" alt="" loading="lazy" data-zoom>
       </div>
     </div>
   </section>
@@ -112,10 +112,10 @@
           <div><button class="btn btn-primary" type="button" id="pl-raise" data-i18n="plac.raise"></button></div>
         </div>
         <div class="plac-stage" aria-live="polite">
-          <img class="plac-room" src="img/p19.jpg" alt="" loading="lazy">
+          <img class="plac-room" src="img/p19.webp" alt="" loading="lazy">
           <div class="tent-wrap">
             <div class="tent">
-              <div class="face front"><img class="pimg" alt=""><div class="pfb"><img src="img/emblem.png" alt=""><div class="pc"></div><div class="pk"></div></div></div>
+              <div class="face front"><img class="pimg" alt=""><div class="pfb"><img src="img/emblem.webp" alt=""><div class="pc"></div><div class="pk"></div></div></div>
               <div class="face back"><img class="bimg" alt=""></div>
             </div>
             <div class="tent-shadow"></div>
@@ -150,9 +150,9 @@
     </div>
   </section>
 </main>
-<script src="js/data.js?v=1793010898"></script>
+<script src="js/data.js?v=1793015018"></script>
 <script src="js/i18n.js"></script>
-<script src="js/main.js?v=1793010898"></script>
+<script src="js/main.js?v=1793015018"></script>
 <script>
   const stampTxt = () => {};
   onLang(() => { document.getElementById("next-when").textContent = L(MUN.next.short); stampTxt(); });
