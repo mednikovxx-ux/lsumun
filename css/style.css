@@ -945,45 +945,11 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 @media (max-width: 1300px) { .brand span { display: block; } }
 @media (max-width: 420px) { .brand b { font-size: 14px; } .lang button { min-width: 34px; padding: 6px 8px; } }
 
-/* ---------- Подвал: мягкая карточка ---------- */
-.site-foot { background: none; color: #d6e6f7; padding: 0 0 clamp(16px, 2.4vw, 28px); }
-.site-foot > .wrap { background:
-    radial-gradient(circle at 92% 0%, rgba(36, 169, 225, 0.35), transparent 45%),
-    linear-gradient(135deg, #133a86 0%, var(--navy) 70%);
-  border-radius: 28px; padding: clamp(28px, 4vw, 52px) clamp(22px, 4vw, 52px) clamp(20px, 2.6vw, 30px); position: relative; overflow: hidden; max-width: calc(var(--wrap) - 2 * var(--gut)); }
-.site-foot > .wrap::after { content: ""; position: absolute; right: -60px; bottom: -90px; width: 340px; height: 300px; background: url(../img/emblem-white.png) center / contain no-repeat; opacity: 0.08; pointer-events: none; }
-@media (max-width: 1240px) { .site-foot > .wrap { margin: 0 var(--gut); } }
-.foot-brand b { font-size: 20px; }
-.foot-nav a { padding: 6px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); }
-.foot-nav a:hover { background: rgba(255, 255, 255, 0.18); }
-.foot-bottom { border-top-color: rgba(255, 255, 255, 0.16); color: #a9c6e6; }
 @media (max-width: 520px) { .brand { min-width: 0; gap: 8px; } .brand img { width: 36px; } .brand span { display: block; min-width: 0; } .brand b { white-space: normal; font-size: 14px; line-height: 1.1; max-width: 6.5em; } }
 
 .greet .gph.has { overflow: hidden; padding: 0; }
 .greet .gph.has img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
 
-/* ---------- Шапка: мягкая синяя плашка ---------- */
-.site-head { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border: 0; padding-top: 12px; pointer-events: none; }
-.site-head.scrolled { border: 0; }
-.site-head .head-in { pointer-events: auto; height: 64px; padding: 0 10px 0 18px; border-radius: 22px; color: #fff;
-  background: radial-gradient(circle at 96% 0%, rgba(36, 169, 225, 0.38), transparent 40%), linear-gradient(135deg, #133a86 0%, var(--navy) 75%);
-  box-shadow: 0 10px 30px -12px rgba(13, 33, 71, 0.55); max-width: calc(var(--wrap) - 2 * var(--gut)); }
-@media (max-width: 1240px) { .site-head .head-in { margin: 0 var(--gut); } }
-.site-head .brand b { color: #fff; }
-.site-head .brand small { color: #a9c6e6; }
-.site-head .nav a { color: #cfe0f5; }
-.site-head .nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
-.site-head .nav a[aria-current="page"] { color: var(--navy); background: #fff; }
-.site-head .lang { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
-.site-head .lang button { color: #cfe0f5; }
-.site-head .lang button[aria-pressed="true"] { background: #fff; color: var(--navy); }
-.site-head .head-cab { background: var(--un); color: #fff; }
-.site-head .head-cab:hover { background: #1b93cf; }
-.site-head .burger { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.25); }
-.site-head .burger span, .site-head .burger span::before, .site-head .burger span::after { background: #fff; }
-@media (max-width: 1300px) {
-  .site-head .nav { top: 84px; left: var(--gut); right: var(--gut); border-radius: 20px; background: var(--navy); border: 0; box-shadow: 0 20px 40px -12px rgba(13, 33, 71, 0.5); }
-}
 /* Плашки-приглашения: синяя обводка с градиентом */
 .join { border: 2px solid transparent; background:
     linear-gradient(var(--sky-2), var(--sky-2)) padding-box,
