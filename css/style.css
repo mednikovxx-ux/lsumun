@@ -984,3 +984,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 @media (max-width: 1300px) {
   .site-head .nav { top: 84px; left: var(--gut); right: var(--gut); border-radius: 20px; background: var(--navy); border: 0; box-shadow: 0 20px 40px -12px rgba(13, 33, 71, 0.5); }
 }
+/* Плашки-приглашения: синяя обводка с градиентом */
+.join { border: 2px solid transparent; background:
+    linear-gradient(var(--sky-2), var(--sky-2)) padding-box,
+    linear-gradient(120deg, var(--un) 0%, #1b93cf 35%, var(--blue-deep) 70%, var(--navy) 100%) border-box; }
