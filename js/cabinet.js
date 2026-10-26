@@ -316,16 +316,18 @@
   // дебаты: общий список, контролируемые или неконтролируемые; часы считаются от времени старта, переживают переключение вкладок
   const deb = (c) => (db.debate[c.id] ??= { mid: null, queue: db.speakers[c.id] || [], q: [], log: [] });
   const curM = (c) => (db.motions[c.id] || []).find((m) => m.id === deb(c).mid);
-  let clock = { key: "", base: 0, t0: 0 }, ctick = null;
+  let clock = { key: "", base: 0, t0: 0, full: 60 }, ctick = null;
   const left = () => Math.ceil(clock.base - (clock.t0 ? (Date.now() - clock.t0) / 1000 : 0));
-  const clockFor = (key, base) => { if (clock.key !== key) clock = { key, base, t0: 0 }; };
+  const clockFor = (key, base) => { if (clock.key !== key) clock = { key, base, t0: 0, full: base }; clock.full = base; };
+  // круглый таймер: шкала убывает по мере того, как идёт время
+  const ring = () => `<div class="tring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="tr-bg" cx="60" cy="60" r="52"/><circle class="tr-fg" id="trp" cx="60" cy="60" r="52" pathLength="100"/></svg><span class="timer" id="stm">${fmt(left())}</span></div>`;
   const spent = (c, m) => deb(c).log.filter((x) => x.mid === m.id).reduce((s, x) => s + x.used, 0);
   C.speakers = () => {
     const c = chairCom(), d = deb(c), m = curM(c), vs = voters(c);
     if (m && m.type === "unmod") {
       clockFor(`${c.id}:u:${m.id}`, m.total * 60);
       return `${comPicker()}<div class="cab-card deb-head"><div><small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt.unmod")}</h3><p class="mo-meta">${mMeta(m)}</p></div><button class="btn btn-ghost btn-s" id="dend">${t("c.endDeb")}</button></div>
-        <div class="cab-card speaker-now" style="margin-top:18px;text-align:center"><span class="timer big" id="stm" data-kind="unmod">${fmt(left())}</span>
+        <div class="cab-card speaker-now" style="margin-top:18px;text-align:center">${ring()}
           <div class="timer-row" style="justify-content:center"><button class="btn btn-primary btn-s" id="sgo">${t(clock.t0 ? "c.pause" : "c.start")}</button></div></div>`;
     }
     const per = m ? m.per : db.session.secs || 60;
@@ -335,8 +337,8 @@
     return `${comPicker()}<div class="cab-card deb-head"><div>${m ? `<small class="muted">${esc(cn(c, m.by))}</small><h3>${t("c.mt.mod")}</h3><p class="mo-meta">${m.topic ? `«${esc(m.topic)}» · ` : ""}${t("c.total")} ${m.total} ${t("c.min")} · ${t("c.perSp")} ${m.per} ${t("c.s")} · <b id="dleft" data-rest="${rest}">${t("c.left")} ${fmt(rest)}</b></p>` : `<h3>${t("c.gen")}</h3>`}</div>
         ${m ? `<button class="btn btn-ghost btn-s" id="dend">${t("c.endDeb")}</button>` : `<div class="field inline"><label for="ssec">${t("c.time")}</label><input id="ssec" type="number" min="15" max="300" step="15" value="${per}" style="width:90px"></div>`}</div>
       <div class="cab-grid" style="margin-top:18px">
-        <div class="cab-card"><div class="speaker-now"><small class="muted">${cur ? t("c.now") : t("c.empty")}</small><b>${cur ? esc(cn(c, cur)) : "—"}</b><span class="timer big" id="stm">${fmt(left())}</span></div>
-          <div class="timer-row"><button class="btn btn-primary btn-s" id="sgo"${cur ? "" : " disabled"}>${t(clock.t0 ? "c.pause" : "c.start")}</button><button class="btn btn-ghost btn-s" id="sdone"${cur ? "" : " disabled"}>${t("c.done")}</button></div>
+        <div class="cab-card"><div class="speaker-now"><small class="muted">${cur ? t("c.now") : t("c.empty")}</small><b>${cur ? esc(cn(c, cur)) : "—"}</b>${ring()}</div>
+          <div class="timer-row"><button class="btn btn-primary btn-s" id="sgo">${t(clock.t0 ? "c.pause" : "c.start")}</button><button class="btn btn-ghost btn-s" id="sdone"${cur ? "" : " disabled"}>${t("c.done")}</button></div>
           <div class="qbox"><small class="muted">${t("c.qs")}</small><div class="wants">${d.q.length ? d.q.map((n, i) => `<span class="want">${esc(cn(c, n))} <button class="x" data-qdel="${i}" aria-label="${t("c.del")}">×</button></span>`).join("") : `<span class="muted">${t("c.noQ")}</span>`}</div>
             <div class="timer-row"><select id="qadd" aria-label="${t("c.country")}"${cur ? "" : " disabled"}>${cOpts(c, vs.filter((n) => n !== cur))}</select><button class="btn btn-ghost btn-s" id="qbtn"${cur ? "" : " disabled"}>${t("c.qAdd")}</button></div></div></div>
         <div class="cab-card"><h3>${t("c.queue")}</h3><ol class="slist">${d.queue.map((n, i) => `<li><span>${esc(cn(c, n))}</span>${i ? `<button class="x" data-sdel="${i}" aria-label="${t("c.del")}">×</button>` : ""}</li>`).join("") || `<li class="muted" style="list-style:none">${t("c.empty")}</li>`}</ol>
@@ -508,14 +510,16 @@
     if ($("#stm")) {
       const c = chairCom(), d = deb(c), m = curM(c), stm = $("#stm"), dl = $("#dleft");
       const paint = () => {
-        const l = left(); stm.textContent = fmt(l); stm.classList.toggle("over", l <= 10);
+        const l = left(), fr = Math.max(0, Math.min(1, l / clock.full)), rp = $("#trp");
+        stm.textContent = fmt(l); stm.classList.toggle("over", l <= 10);
+        if (rp) { rp.style.strokeDashoffset = 100 * (1 - fr); rp.setAttribute("class", "tr-fg" + (l <= 10 ? " red" : fr <= 0.3 ? " amber" : "")); }
         if (dl) { const r = +dl.dataset.rest - (m.per - l); dl.textContent = r > 0 ? `${t("c.left")} ${fmt(r)}` : t("c.timeUp"); dl.classList.toggle("badc", r <= 0); }
         if (l <= 0 && clock.t0) { clock.base = 0; clock.t0 = 0; clearInterval(ctick); $("#sgo") && ($("#sgo").textContent = t("c.start")); }
       };
       paint(); if (clock.t0) ctick = setInterval(paint, 250);
       $("#sgo") && ($("#sgo").onclick = () => {
         if (clock.t0) { clock.base = left(); clock.t0 = 0; clearInterval(ctick); }
-        else { if (left() <= 0) clock.base = m && m.type === "unmod" ? m.total * 60 : m ? m.per : db.session.secs || 60; clock.t0 = Date.now(); ctick = setInterval(paint, 250); }
+        else { if (left() <= 0) clock.base = clock.full; clock.t0 = Date.now(); ctick = setInterval(paint, 250); }
         $("#sgo").textContent = t(clock.t0 ? "c.pause" : "c.start"); paint();
       });
       $("#sdone") && ($("#sdone").onclick = () => {
