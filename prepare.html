@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-ru="Подготовка · Модель ООН ННГУ" data-en="Prepare · LSU Model UN">Подготовка · Модель ООН ННГУ</title>
+<meta name="description" content="Президиум Модели ООН ННГУ: генеральный секретарь и председатели комитетов.">
+<link rel="icon" href="img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="prepare">
+<main>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker" data-i18n="prep.kicker"></span>
+    <div class="ph-row"><div><h1 data-i18n="path.title"></h1>
+    <p class="lead" data-i18n="path.lead"></p></div>
+    <div class="mic" aria-hidden="true">
+      <div class="mic-bubble"><span id="mic-text"></span></div>
+      <svg viewBox="0 0 160 200">
+        <path class="w w1" d="M44 52 q-14 22 0 44"/><path class="w w2" d="M30 40 q-24 34 0 68"/><path class="w w3" d="M16 28 q-34 46 0 92"/>
+        <path class="w w1" d="M116 52 q14 22 0 44"/><path class="w w2" d="M130 40 q24 34 0 68"/><path class="w w3" d="M144 28 q34 46 0 92"/>
+        <rect x="58" y="22" width="44" height="78" rx="22" class="head"/>
+        <path d="M66 40h28M66 52h28M66 64h28M66 76h28" class="grill"/>
+        <path d="M46 78 q0 40 34 40 q34 0 34 -40" class="arm"/>
+        <rect x="76" y="118" width="8" height="44" rx="4" class="stand"/>
+        <rect x="52" y="160" width="56" height="12" rx="6" class="stand"/>
+      </svg>
+    </div></div>
+  </div></section>
+  <section style="padding-top:0"><div class="wrap" id="path"></div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/prepare.js"></script>
+<script>
+  // Говорящий микрофон: фразы, с которых делегат начинает выступление
+  (() => {
+    const P = { ru: ["Уважаемый председатель…", "Уважаемые делегаты…", "Делегация предлагает…", "Мы поддерживаем…", "Предложение о модерированных дебатах!"], en: ["Honourable Chair…", "Distinguished delegates…", "Our delegation proposes…", "We support…", "Motion for a moderated caucus!"] };
+    const el = document.getElementById("mic-text"); let i = 0;
+    const tick = () => { el.classList.remove("on"); setTimeout(() => { el.textContent = (P[LANG] || P.ru)[i++ % 5]; el.classList.add("on"); }, 250); };
+    tick(); if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(tick, 2600);
+  })();
+</script>
+</body>
+</html>

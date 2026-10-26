@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-ru="Модель ООН ННГУ · LSU MUN" data-en="LSU Model UN · Nizhny Novgorod">Модель ООН ННГУ · LSU MUN</title>
+<meta name="description" content="Студенческая Модель ООН ННГУ им. Н. И. Лобачевского: комитеты, президиум, архив сессий. IV сессия — весна 2027.">
+<link rel="icon" href="img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<main>
+  <section class="hf">
+    <div class="wrap">
+      <div class="hf-top">
+        <div class="hf-row">
+          <div class="hf-head">
+            <span class="kicker" data-i18n="hero.kicker"></span>
+            <h1 class="hf-title"><span data-i18n="ttl.a"></span> <span class="hl"><span data-i18n="ttl.b"></span><svg viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 16 C 90 6, 200 4, 396 12"/></svg></span></h1>
+          </div>
+          <button class="seal" type="button" aria-label="Резолюция принята">
+            <svg viewBox="0 0 220 220" aria-hidden="true">
+              <defs><path id="sealc" d="M110,110 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0"/></defs>
+              <circle cx="110" cy="110" r="104" class="o"/><circle cx="110" cy="110" r="98" class="o2"/><circle cx="110" cy="110" r="68" class="o2"/>
+              <text class="ring"><textPath href="#sealc" id="seal-ring"></textPath></text>
+              <rect x="40" y="94" width="140" height="32" rx="4" class="band"/>
+              <text x="110" y="118" text-anchor="middle" class="big" id="seal-big"></text>
+              <text x="110" y="78" text-anchor="middle" class="small" id="seal-top"></text>
+              <text x="110" y="150" text-anchor="middle" class="small" id="seal-bot"></text>
+              <text x="110" y="168" text-anchor="middle" class="star">★ ★ ★</text>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <figure class="hf-photo">
+        <img src="img/hero.jpg" alt="" data-i18n-alt="hero.caption" fetchpriority="high">
+        <figcaption><span data-i18n="hero.caption"></span></figcaption>
+        <a class="hf-next" href="spring2027.html"><small data-i18n="hero.next"></small><b id="next-when"></b><span aria-hidden="true">→</span></a>
+      </figure>
+      <div class="hf-body">
+        <div class="hf-foot">
+          <p class="lead" data-i18n="hero.lead"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="spring2027.html"><span data-i18n="nw.cta"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="prepare.html" data-i18n="nw.cta2"></a>
+          </div>
+        </div>
+        <a class="org hf-org" href="https://www.unn.ru/" target="_blank" rel="noopener"><img src="img/unn.svg" alt="ННГУ им. Н. И. Лобачевского"><span><small data-i18n="org.label"></small><span data-i18n="about.p3"></span></span></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="stats" aria-label="">
+    <div class="wrap stats-grid">
+      <div class="stat"><b data-count="3" data-suffix="">3</b><span data-i18n="stats.sessions"></span></div>
+      <div class="stat"><b data-count="200" data-suffix="+">200+</b><span data-i18n="stats.delegates"></span></div>
+      <div class="stat"><b data-count="5" data-suffix="">5</b><span data-i18n="stats.committees"></span></div>
+      <div class="stat"><b data-count="2" data-suffix="">2</b><span data-i18n="stats.langs"></span></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="rv">
+        <span class="kicker" data-i18n="about.kicker"></span>
+        <h2 data-i18n="about.title" style="margin-bottom:28px"></h2>
+        <div class="about-text"><p data-i18n="about.p1"></p><p data-i18n="about.p2"></p></div>
+      </div>
+      <div class="about-photos rv">
+        <img src="img/p19.jpg" alt="" loading="lazy" data-zoom>
+        <img src="img/p21.jpg" alt="" loading="lazy" data-zoom>
+        <img src="img/p26.jpg" alt="" loading="lazy" data-zoom>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kicker" data-i18n="greet.kicker"></span><h2 data-i18n="greet.title"></h2></div>
+      </div>
+      <div class="greet-grid" data-render="greet"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--white)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kicker" data-i18n="com.kicker"></span><h2 data-i18n="com.title"></h2></div>
+        <p class="lead" data-i18n="com.lead"></p>
+      </div>
+      <div class="com-grid" data-render="comGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="plac-wrap rv" id="placard">
+        <div class="plac-form">
+          <span class="kicker" data-i18n="plac.kicker"></span>
+          <h2 data-i18n="plac.title"></h2>
+          <p class="muted" data-i18n="plac.text"></p>
+          <div class="field"><label for="pl-com" data-i18n="plac.committee"></label><select id="pl-com"></select></div>
+          <div class="field"><label for="pl-country" data-i18n="plac.country"></label><select id="pl-country"></select></div>
+          <div><button class="btn btn-primary" type="button" id="pl-raise" data-i18n="plac.raise"></button></div>
+        </div>
+        <div class="plac-stage" aria-live="polite">
+          <img class="plac-room" src="img/p19.jpg" alt="" loading="lazy">
+          <div class="tent-wrap">
+            <div class="tent">
+              <div class="face front"><img class="pimg" alt=""><div class="pfb"><img src="img/emblem.png" alt=""><div class="pc"></div><div class="pk"></div></div></div>
+              <div class="face back"><img class="bimg" alt=""></div>
+            </div>
+            <div class="tent-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><div><span class="kicker" data-i18n="gal.kicker"></span><h2 data-i18n="gal.title"></h2></div>
+        <a class="btn btn-ghost" href="https://vk.com/albums-225230050" target="_blank" rel="noopener" data-i18n="gal.more" style="justify-self:end"></a></div>
+      <div class="gallery" data-render="gallery"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 data-i18n="faq.title" style="margin-bottom:24px"></h2>
+      <div class="faq">
+        <details><summary data-i18n="faq.q1"></summary><p data-i18n="faq.a1"></p></details>
+        <details><summary data-i18n="faq.q2"></summary><p data-i18n="faq.a2"></p></details>
+        <details><summary data-i18n="faq.q3"></summary><p data-i18n="faq.a3"></p></details>
+        <details><summary data-i18n="faq.q4"></summary><p data-i18n="faq.a4"></p></details>
+        <details><summary data-i18n="faq.q5"></summary><p data-i18n="faq.a5"></p></details>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const stampTxt = () => {};
+  onLang(() => { document.getElementById("next-when").textContent = L(MUN.next.short); stampTxt(); });
+  MUNRender.placard(document.getElementById("placard"));
+  const ap = window.applyLang; window.applyLang = () => { ap(); MUNRender.placard(document.getElementById("placard")); document.getElementById("next-when").textContent = L(MUN.next.short); stampTxt(); };
+
+  // Печать Генерального секретаря: тексты на языке страницы, по клику ставится заново
+  const sealTxt = () => { const en = LANG === "en";
+    document.getElementById("seal-ring").textContent = en ? "SECRETARY-GENERAL · LSU MODEL UNITED NATIONS · " : "ГЕНЕРАЛЬНЫЙ СЕКРЕТАРЬ · МОДЕЛЬ ООН ННГУ · ";
+    document.getElementById("seal-big").textContent = en ? "ADOPTED" : "ПРИНЯТО";
+    document.getElementById("seal-top").textContent = en ? "RESOLUTION" : "РЕЗОЛЮЦИЯ";
+    document.getElementById("seal-bot").textContent = "LSU MUN"; };
+  sealTxt(); const ap2 = window.applyLang; window.applyLang = () => { ap2(); sealTxt(); };
+  document.querySelectorAll(".seal").forEach((v) => v.addEventListener("click", () => { v.classList.remove("hit"); void v.offsetWidth; v.classList.add("hit"); }));
+</script>
+</body>
+</html>
